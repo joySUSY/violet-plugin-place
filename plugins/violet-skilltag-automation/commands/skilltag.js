@@ -21,10 +21,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// Configuration paths
-const PLUGIN_DIR = path.join(process.env.HOME || process.env.USERPROFILE, '.claude', 'plugins', 'violet-skilltag-automation');
+// Configuration paths - use __dirname for plugin-relative paths
+const PLUGIN_DIR = path.resolve(__dirname, '..');
 const TAGS_FILE = path.join(PLUGIN_DIR, 'skill-tags.json');
-const SETTINGS_FILE = path.join(process.env.HOME || process.env.USERPROFILE, '.claude', 'settings.json');
+const HOME_DIR = process.env.HOME || process.env.USERPROFILE;
+const SETTINGS_FILE = path.join(HOME_DIR, '.claude', 'settings.json');
 
 /**
  * Load skill tags configuration

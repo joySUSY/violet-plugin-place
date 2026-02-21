@@ -18,11 +18,12 @@
 const fs = require('fs');
 const path = require('path');
 
-// Configuration paths
-const PLUGIN_DIR = path.join(process.env.HOME || process.env.USERPROFILE, '.claude', 'plugins', 'violet-skilltag-automation');
+// Configuration paths - use __dirname for plugin-relative paths
+const PLUGIN_DIR = path.resolve(__dirname, '..');
 const TAGS_FILE = path.join(PLUGIN_DIR, 'skill-tags.json');
-const SETTINGS_FILE = path.join(process.env.HOME || process.env.USERPROFILE, '.claude', 'settings.json');
-const SKILLS_DIR = path.join(process.env.HOME || process.env.USERPROFILE, '.claude', 'skills');
+const HOME_DIR = process.env.HOME || process.env.USERPROFILE;
+const SETTINGS_FILE = path.join(HOME_DIR, '.claude', 'settings.json');
+const SKILLS_DIR = path.join(HOME_DIR, '.claude', 'skills');
 const LOG_FILE = path.join(PLUGIN_DIR, 'skill-activation-log.jsonl');
 
 /**
@@ -498,11 +499,31 @@ function formatActivation(message, intents, requirements, selection, totalSkills
 }
 
 /**
+ * Read JSON input from stdin (Claude Code hook protocol)
+ */
+function readStdin() {
+  return new Promise((resolve) => {
+    let data = '';
+    process.stdin.setEncoding('utf8');
+    process.stdin.on('data', (chunk) => { data += chunk; });
+    process.stdin.on('end', () => {
+      try {
+        resolve(JSON.parse(data));
+      } catch {
+        resolve({ prompt: data.trim() });
+      }
+    });
+    setTimeout(() => resolve({ prompt: '' }), 3000);
+  });
+}
+
+/**
  * Main hook execution
  */
-function main() {
+async function main() {
   try {
-    const message = process.argv[2] || '';
+    const input = await readStdin();
+    const message = input.prompt || '';
 
     if (!message || message.trim().length === 0) {
       process.exit(0);

@@ -3,12 +3,24 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "*",
+        "matcher": "startup",
         "hooks": [
           {
             "type": "command",
-            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/load-soul.sh",
-            "timeout": 30
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/load-soul.js\"",
+            "timeout": 15,
+            "statusMessage": "Loading Violet Soul..."
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/load-soul.js\"",
+            "timeout": 15,
+            "statusMessage": "Reloading Violet Soul..."
           }
         ]
       }

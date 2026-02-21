@@ -1,0 +1,16 @@
+{
+  "description": "Violet Skill Auto-Activator - Analyzes user prompts and suggests relevant skills",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/skill-activator.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
