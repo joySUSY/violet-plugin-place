@@ -13,7 +13,7 @@
       "name": "violet-skilltag-automation",
       "source": "./plugins/violet-skilltag-automation",
       "description": "Intelligent skill activation system with bilingual support and SAB priority",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "author": {
         "name": "Violet & Susy"
       },
@@ -37,7 +37,7 @@
       "name": "violet-soul-loader",
       "source": "./plugins/violet-soul-loader",
       "description": "Automatically loads Violet's soul configuration files at Claude Code startup",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
