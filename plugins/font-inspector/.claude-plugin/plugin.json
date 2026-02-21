@@ -15,12 +15,5 @@
     "cjk",
     "opentype"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "python": ">=3.8",
-    "packages": [
-      "fonttools>=4.38.0",
-      "ufoLib2>=0.14.0"
-    ]
-  }
+  "license": "MIT"
 }

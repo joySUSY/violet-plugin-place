@@ -6,9 +6,6 @@
     "name": "Joysusy & Violet Klaudia",
     "email": "violet@susy.dev"
   },
-  "homepage": "https://github.com/violet-susy/violet-soul-loader",
-  "repository": "https://github.com/violet-susy/violet-soul-loader",
-  "bugs": "https://github.com/violet-susy/violet-soul-loader/issues",
   "license": "MIT",
   "keywords": ["violet", "configuration", "soul", "identity", "automation", "startup"]
 }
