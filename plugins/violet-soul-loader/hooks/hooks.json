@@ -1,0 +1,17 @@
+{
+  "description": "Violet Soul Loader - Automatically loads soul configuration at startup",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/load-soul.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

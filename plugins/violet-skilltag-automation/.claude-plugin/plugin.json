@@ -1,0 +1,39 @@
+{
+  "name": "violet-skilltag-automation",
+  "version": "4.0.0",
+  "description": "🌸 Violet's intelligent skill auto-activation system with requirement analysis and tag-based matching",
+  "author": "Violet & Susy",
+  "license": "MIT",
+  "settings": {
+    "enableAutoActivation": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable automatic skill activation suggestions"
+    },
+    "matchThreshold": {
+      "type": "number",
+      "default": 0.6,
+      "description": "Minimum confidence score (0-1) to trigger skill suggestion"
+    },
+    "minSkillsPercentage": {
+      "type": "number",
+      "default": 10,
+      "description": "Minimum percentage of total skills to load (hard requirement)"
+    },
+    "maxSkillsPercentage": {
+      "type": "number",
+      "default": 25,
+      "description": "Maximum percentage of total skills to load without permission"
+    },
+    "forceUsingSuperPowers": {
+      "type": "boolean",
+      "default": true,
+      "description": "Always load using-superpowers skill at session start"
+    },
+    "bilingualMode": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable Chinese/English keyword matching"
+    }
+  }
+}

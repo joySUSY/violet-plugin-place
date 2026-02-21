@@ -1,0 +1,35 @@
+# Rust build artifacts
+scripts/rust/target/
+scripts/rust/Cargo.lock
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+svg_glyphs/
+*.ufo
+test_output/
+analysis/
+
+# Logs
+*.log

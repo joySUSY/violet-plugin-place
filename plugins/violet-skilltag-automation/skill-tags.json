@@ -1,0 +1,137 @@
+{
+  "tags": {
+    "debug": {
+      "keywords": ["debug", "调试", "fix", "修复", "bug", "error", "错误", "issue", "问题", "troubleshoot", "排查"],
+      "skills": ["systematic-debugging", "parallel-debugging", "test-debug-failures", "error-recovery", "error-handling-skills"],
+      "priority": "A"
+    },
+    "review": {
+      "keywords": ["review", "审查", "code review", "代码审查", "check", "检查", "audit", "审计", "quality", "质量"],
+      "skills": ["code-review", "code-review-excellence", "code-reviewer", "critical-code-reviewer", "security-review", "web-design-reviewer"],
+      "priority": "S"
+    },
+    "refactor": {
+      "keywords": ["refactor", "重构", "clean", "清理", "optimize", "优化", "improve", "改进", "simplify", "简化"],
+      "skills": ["refactor-clean", "component-refactoring", "code-optimization", "beautiful-code", "performance-optimization"],
+      "priority": "A"
+    },
+    "test": {
+      "keywords": ["test", "测试", "tdd", "unit test", "单元测试", "e2e", "integration", "集成测试", "coverage", "覆盖率"],
+      "skills": ["superpowers-tdd", "tdd-workflow", "test-patterns", "testing", "testing-strategies", "test-coverage", "pytest-runner", "verify-code"],
+      "priority": "S"
+    },
+    "commit": {
+      "keywords": ["commit", "提交", "git", "push", "推送", "pr", "pull request", "merge", "合并"],
+      "skills": ["git-master", "pr-creator", "make-repo-contribution", "checkpoint"],
+      "priority": "B"
+    },
+    "docs": {
+      "keywords": ["document", "文档", "docs", "readme", "说明", "comment", "注释", "explain", "解释"],
+      "skills": ["docs-write", "docs-writer", "document", "codebase-documenter", "documentation-lookup", "backend-to-frontend-handoff-docs"],
+      "priority": "B"
+    },
+    "dev": {
+      "keywords": ["develop", "开发", "build", "构建", "create", "创建", "implement", "实现", "code", "编码"],
+      "skills": ["build", "build-fix", "implement", "auto-build", "full-stack", "omnidev-v2"],
+      "priority": "S"
+    },
+    "frontend": {
+      "keywords": ["frontend", "前端", "react", "ui", "ux", "css", "html", "component", "组件", "design", "设计"],
+      "skills": ["frontend-design", "frontend-dev", "react-dev", "react-modernization", "ui-ux-pro-max", "ui-styling", "canvas-design", "figma"],
+      "priority": "S"
+    },
+    "backend": {
+      "keywords": ["backend", "后端", "api", "server", "服务器", "database", "数据库", "endpoint", "接口"],
+      "skills": ["backend-development", "backend-patterns", "backend-api-standards", "software-backend", "fastapi-pro", "postgres-patterns"],
+      "priority": "S"
+    },
+    "rust": {
+      "keywords": ["rust", "cargo", "rustc", "tokio", "async rust", "pyo3", "maturin", "ffi"],
+      "skills": ["rust-expert", "rust-pro", "rust-coding", "rust-best-practices", "rust-architect", "pyo3-maturin-bindings", "rust-refactor-helper", "rust-testing-verification"],
+      "priority": "S"
+    },
+    "python": {
+      "keywords": ["python", "py", "pip", "venv", "pandas", "numpy", "fastapi", "django", "flask"],
+      "skills": ["python-development", "python-patterns", "python-code-style", "python-packaging", "pandas-pro", "fastapi-pro"],
+      "priority": "S"
+    },
+    "javascript": {
+      "keywords": ["javascript", "js", "node", "nodejs", "npm", "yarn", "pnpm", "typescript", "ts"],
+      "skills": ["javascript-pro", "language-pro", "react-dev", "vercel-react-best-practices"],
+      "priority": "A"
+    },
+    "java": {
+      "keywords": ["java", "jvm", "spring", "maven", "gradle", "kotlin"],
+      "skills": ["dev-experts"],
+      "priority": "S"
+    },
+    "plan": {
+      "keywords": ["plan", "计划", "design", "设计", "architecture", "架构", "strategy", "策略", "roadmap", "路线图"],
+      "skills": ["superpowers-plan", "workflows-plan", "create-plans", "planning-with-files", "architecture-decision-records", "senior-architect"],
+      "priority": "A"
+    },
+    "agent": {
+      "keywords": ["agent", "智能体", "mcp", "subagent", "子代理", "orchestrate", "编排", "spawn", "派生"],
+      "skills": ["agent-evaluation", "agent-identifier", "agent-memory", "ai-agents-architect", "superpowers:dispatching-parallel-agents", "orchestrate"],
+      "priority": "A"
+    },
+    "security": {
+      "keywords": ["security", "安全", "vulnerability", "漏洞", "auth", "认证", "encrypt", "加密", "xss", "sql injection"],
+      "skills": ["security-review", "security-audit", "senior-security", "cross-site-scripting-and-html-injection-testing"],
+      "priority": "S"
+    },
+    "performance": {
+      "keywords": ["performance", "性能", "optimize", "优化", "slow", "慢", "fast", "快", "benchmark", "基准测试"],
+      "skills": ["performance-optimization", "code-optimization", "benchmark-suite-manager", "agentdb-performance-optimization"],
+      "priority": "A"
+    },
+    "database": {
+      "keywords": ["database", "数据库", "sql", "postgres", "mysql", "mongodb", "redis", "schema", "模式"],
+      "skills": ["database-architect", "postgres-patterns", "postgres-schema-design", "schema-designer", "using-relational-databases"],
+      "priority": "A"
+    },
+    "search": {
+      "keywords": ["search", "搜索", "query", "查询", "vector", "向量", "rag", "semantic", "语义"],
+      "skills": ["super-search", "vector-database-engineer", "hybrid-search-implementation", "pgvector-semantic-search", "agentdb-vector-search"],
+      "priority": "A"
+    },
+    "devops": {
+      "keywords": ["devops", "运维", "ci", "cd", "deploy", "部署", "docker", "kubernetes", "k8s", "pipeline"],
+      "skills": ["devops", "devops-mastery-v2", "github-actions-templates"],
+      "priority": "B"
+    },
+    "research": {
+      "keywords": ["research", "研究", "investigate", "调查", "analyze", "分析", "explore", "探索", "learn", "学习"],
+      "skills": ["research-strategy-web", "deep-research", "knowledge-research", "web-search-researcher", "research-repo"],
+      "priority": "A"
+    },
+    "skill": {
+      "keywords": ["skill", "技能", "create skill", "创建技能", "write skill", "编写技能"],
+      "skills": ["skill-creator", "skill-development", "superpowers:writing-skills", "advanced-skill-creator-1.0.0"],
+      "priority": "B"
+    },
+    "memory": {
+      "keywords": ["memory", "记忆", "remember", "记住", "recall", "回忆", "context", "上下文"],
+      "skills": ["agent-memory", "agent-memory-mcp", "agent-memory-systems", "super-save"],
+      "priority": "S"
+    },
+    "visualization": {
+      "keywords": ["visualize", "可视化", "diagram", "图表", "graph", "图", "chart", "绘图", "draw"],
+      "skills": ["visualization-expert", "graphviz-dot-generator", "plantuml-diagram-generator", "trace-to-svg"],
+      "priority": "B"
+    }
+  },
+  "customTags": {},
+  "skillAliases": {
+    "superpowers:systematic-debugging": "systematic-debugging",
+    "superpowers:test-driven-development": "tdd",
+    "superpowers:brainstorming": "brainstorm",
+    "superpowers:writing-plans": "plan",
+    "superpowers:verification-before-completion": "verify"
+  },
+  "priorityWeights": {
+    "S": 3.0,
+    "A": 2.0,
+    "B": 1.0
+  }
+}

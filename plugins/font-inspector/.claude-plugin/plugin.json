@@ -1,0 +1,26 @@
+{
+  "name": "font-inspector",
+  "version": "1.0.0",
+  "description": "Font visualization and analysis plugin with SVG/UFO export and CJK optimization",
+  "author": {
+    "name": "Violet & Joysusy",
+    "email": "violet@sanctuary.ai"
+  },
+  "keywords": [
+    "font",
+    "typography",
+    "visualization",
+    "svg",
+    "ufo",
+    "cjk",
+    "opentype"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "python": ">=3.8",
+    "packages": [
+      "fonttools>=4.38.0",
+      "ufoLib2>=0.14.0"
+    ]
+  }
+}
