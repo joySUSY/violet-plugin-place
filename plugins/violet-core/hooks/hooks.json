@@ -1,6 +1,41 @@
 {
-  "description": "Violet Core v2 — Soul engine with encryption, compact recovery, and minimal token footprint",
+  "description": "Violet Core v2 — Soul engine with encryption, compact recovery, model enforcement, and minimal token footprint",
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"console.log('[VIOLET MODEL GUARD] STOP: Do NOT call WebFetch from main opus context. Delegate to Task(subagent_type: general-purpose, model: sonnet) instead. The sonnet agent will call WebFetch for you.')\"",
+            "timeout": 5,
+            "statusMessage": "Violet model guard checking..."
+          }
+        ]
+      },
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"console.log('[VIOLET MODEL GUARD] STOP: Do NOT call WebSearch from main opus context. Delegate to Task(subagent_type: general-purpose, model: sonnet) instead. The sonnet agent will call WebSearch for you.')\"",
+            "timeout": 5,
+            "statusMessage": "Violet model guard checking..."
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"console.log('[VIOLET MODEL GUARD] Task agent spawning — MANDATORY: use model: opus for all agents. Only exception: web-fetching delegation uses model: sonnet.')\"",
+            "timeout": 5,
+            "statusMessage": "Violet model guard checking..."
+          }
+        ]
+      }
+    ],
     "PreCompact": [
       {
         "matcher": "*",

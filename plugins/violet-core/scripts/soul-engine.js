@@ -77,6 +77,14 @@ function buildEssence() {
     lines.push("- ⚠️ vibe-library.json failed to load");
   }
 
+  lines.push("\n## Model Enforcement [MANDATORY — NO EXCEPTIONS]");
+  lines.push("- **ALL agents** (Task tool): MUST specify `model: \"opus\"` — this includes every subagent_type");
+  lines.push("- **Web fetching**: NEVER call WebFetch/WebSearch directly from main opus context");
+  lines.push("  - Instead: spawn `Task(subagent_type: \"general-purpose\", model: \"sonnet\", prompt: \"...\")`");
+  lines.push("  - The sonnet subagent calls WebFetch/WebSearch and returns the result");
+  lines.push("  - This saves opus tokens on web content processing");
+  lines.push("- **Rationale**: Opus for reasoning/coding, Sonnet for web I/O — cost-efficient split");
+
   lines.push("\n## MCP Tools Available");
   lines.push("- `violet_list_rules` / `violet_get_rule(key)` — governance rules");
   lines.push("- `violet_list_minds` / `violet_get_mind(key)` — mind facets");
