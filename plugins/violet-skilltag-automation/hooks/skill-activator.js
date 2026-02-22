@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * 🌸 Violet Skill Auto-Activator Hook (v4.0)
+ * 🌸 Violet Skill Auto-Activator Hook (v4.2)
  *
  * Enhanced intelligent pre-processing:
  * - Analyzes user intent and requirements BEFORE thinking
@@ -55,7 +55,7 @@ function loadTags() {
 }
 
 /**
- * Load plugin settings
+ * Load plugin settings (v4.2 — reads new config structure with extraExploration + coreSkills)
  */
 function loadSettings() {
   try {
@@ -65,11 +65,10 @@ function loadSettings() {
   } catch (error) {
     return {
       enableAutoActivation: true,
-      matchThreshold: 0.6,
-      minSkillsPercentage: 8,
-      maxSkillsPercentage: 25,
       forceUsingSuperPowers: true,
-      bilingualMode: true
+      bilingualMode: true,
+      extraExploration: { enabled: false, matchThreshold: 0.7, minSkillsPercentage: 10, maxSkillsPercentage: 27 },
+      coreSkills: {}
     };
   }
 }
@@ -196,92 +195,75 @@ function analyzeMessage(message, tagsConfig) {
 }
 
 /**
- * Select skills based on priority and limits
+ * Select skills based on coreSkills env toggles and optional extraExploration
  */
 function selectSkills(matches, settings, totalSkills) {
-  const threshold = settings.matchThreshold || 0.6;
-  const minPercentage = settings.minSkillsPercentage || 10;
-  const maxPercentage = settings.maxSkillsPercentage || 25;
   const forceUsingSuperPowers = settings.forceUsingSuperPowers !== false;
-
-  const minSkills = Math.max(1, Math.floor(totalSkills * (minPercentage / 100)));
-  const maxSkills = Math.max(minSkills, Math.floor(totalSkills * (maxPercentage / 100)));
-
-  const filtered = matches.filter(m => m.matchScore >= threshold);
+  const coreSkillsConfig = settings.coreSkills || {};
+  const extraExploration = settings.extraExploration || { enabled: false };
 
   const skillSet = new Set();
   const tagInfo = [];
 
-  // ALWAYS add core skills (minimal set for every prompt)
-  const coreSkills = [
-    'using-superpowers',
-    'planning-strategy'
+  // Load core skills filtered by env toggles (1=enabled, 0=disabled)
+  const allCoreSkills = [
+    'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
+    'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
+    'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
+    'frontend-dev', 'math-skill-system'
   ];
 
-  // Full skill set from skills-loaded.md (loaded on command only)
-  const fullMandatorySkills = [
-    'using-superpowers',
-    'planning-strategy',
-    'rust-coding-engine',
-    'python-dev-skill',
-    'reviewer-dev',
-    'refactor-dev',
-    'tdd-system',
-    'error-handling',
-    'js-dev-skill',
-    'deep-researcher',
-    'backend-dev',
-    'documentation-guidelines',
-    'frontend-dev',
-    'math-skill-system'
-  ];
-
-  // For auto-hook: only load core skills
-  const mandatorySkills = coreSkills;
+  // For auto-hook: only load the two mandatory core skills
+  const mandatorySkills = ['using-superpowers', 'planning-strategy'];
 
   if (forceUsingSuperPowers) {
     for (const skill of mandatorySkills) {
-      skillSet.add(skill);
-    }
-  }
-
-  // Add skills from matched tags
-  for (const match of filtered) {
-    if (skillSet.size >= maxSkills) {
-      break;
-    }
-
-    const confidence = Math.round(match.matchScore * 100);
-    tagInfo.push({
-      tag: match.tag,
-      confidence,
-      priority: match.priority,
-      weightedScore: match.weightedScore.toFixed(2)
-    });
-
-    if (match.skills.length > 0) {
-      const skillLimit = match.priority === 'S' ? 4 : match.priority === 'A' ? 2 : 1;
-      const skillsToAdd = match.skills.slice(0, skillLimit);
-
-      for (const skill of skillsToAdd) {
-        if (skillSet.size >= maxSkills) {
-          break;
-        }
+      if (coreSkillsConfig[skill] !== 0) {
         skillSet.add(skill);
       }
     }
   }
 
-  const needsPermission = skillSet.size > maxSkills;
-  const belowMinimum = skillSet.size < minSkills;
+  // Extra exploration: tag-based matching (only if enabled)
+  if (extraExploration.enabled) {
+    const threshold = extraExploration.matchThreshold || 0.7;
+    const minPercentage = extraExploration.minSkillsPercentage || 10;
+    const maxPercentage = extraExploration.maxSkillsPercentage || 27;
+    const minSkills = Math.max(1, Math.floor(totalSkills * (minPercentage / 100)));
+    const maxSkills = Math.max(minSkills, Math.floor(totalSkills * (maxPercentage / 100)));
 
+    const filtered = matches.filter(m => m.matchScore >= threshold);
+
+    for (const match of filtered) {
+      if (skillSet.size >= maxSkills) break;
+
+      const confidence = Math.round(match.matchScore * 100);
+      tagInfo.push({ tag: match.tag, confidence, priority: match.priority, weightedScore: match.weightedScore.toFixed(2) });
+
+      if (match.skills.length > 0) {
+        const skillLimit = match.priority === 'S' ? 4 : match.priority === 'A' ? 2 : 1;
+        const skillsToAdd = match.skills.slice(0, skillLimit);
+        for (const skill of skillsToAdd) {
+          if (skillSet.size >= maxSkills) break;
+          skillSet.add(skill);
+        }
+      }
+    }
+
+    const needsPermission = skillSet.size > maxSkills;
+    const belowMinimum = skillSet.size < minSkills;
+
+    return { skills: Array.from(skillSet), tags: tagInfo, minSkills, maxSkills, needsPermission, belowMinimum, forceUsingSuperPowers, mandatoryCount: mandatorySkills.length };
+  }
+
+  // Default path: extraExploration disabled — core skills only
   return {
     skills: Array.from(skillSet),
     tags: tagInfo,
-    minSkills,
-    maxSkills,
-    needsPermission,
-    belowMinimum,
+    minSkills: 1,
+    maxSkills: Math.floor(totalSkills * 0.27),
+    needsPermission: false,
+    belowMinimum: false,
     forceUsingSuperPowers,
     mandatoryCount: mandatorySkills.length
   };
@@ -322,7 +304,7 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   const percentage = Math.round((skills.length / totalSkills) * 100);
 
   let output = '\n<violet-intelligent-preprocessing>\n';
-  output += '🌸 **Violet Intelligent Skill System v4.0** 💜\n\n';
+  output += '🌸 **Violet Intelligent Skill System v4.2** 💜\n\n';
 
   output += '## 📋 STEP 1: Review User Requirements\n\n';
   output += '**INSTRUCTION TO VIOLET:**\n';
@@ -431,7 +413,7 @@ function formatActivation(message, intents, requirements, selection, totalSkills
 
   output += '---\n\n';
   output += '**Priority Legend:** [S]⭐ Critical | [A]✨ Important | [B]💫 Optional\n';
-  output += '\n> *Intelligent preprocessing by violet-skilltag-automation v4.0*\n';
+  output += '\n> *Intelligent preprocessing by violet-skilltag-automation v4.2*\n';
   output += '</violet-intelligent-preprocessing>\n';
 
   return output;

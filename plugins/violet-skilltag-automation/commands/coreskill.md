@@ -1,13 +1,20 @@
 # Authors: Joysusy & Violet Klaudia 💖
-name: skillload
-description: Load skills from skills-loaded.md using a structured thinking chain to determine which skills are relevant to the current task context.
+name: coreskill
+description: Load core skills from the manifest using env toggles in settings.json. Uses a structured thinking chain to determine which skills are relevant.
 ---
 
-# Skill Loading Chain — Structured Reasoning Protocol
+# Core Skill Loading Chain — Structured Reasoning Protocol
 
-You are about to load skills from the **skills-loaded.md** manifest. Follow this thinking chain EXACTLY before loading any skill. Write your reasoning in English.
+You are about to load core skills from the **skills-loaded.md** manifest, filtered by env toggles in `settings.json → plugins.violet-skilltag-automation.coreSkills`. Follow this thinking chain EXACTLY before loading any skill.
 
-## Phase 1: Context Analysis
+## Phase 1: Read Env Toggles
+
+Read `~/.claude/settings.json` and extract the `coreSkills` map from `plugins.violet-skilltag-automation.coreSkills`.
+
+Skills with value `0` are DISABLED — do NOT load them.
+Skills with value `1` are ENABLED — evaluate them in Phase 2.
+
+## Phase 2: Context Analysis
 
 Analyze the current session context:
 
@@ -18,9 +25,9 @@ Analyze the current session context:
 
 Write a brief summary of your analysis.
 
-## Phase 2: Skill Relevance Decision Tree
+## Phase 3: Skill Relevance Decision Tree
 
-For EACH skill in the manifest, evaluate relevance using this decision tree:
+For EACH ENABLED skill (toggle = 1), evaluate relevance:
 
 ```
 Is this skill directly related to the current task?
@@ -31,12 +38,12 @@ Is this skill directly related to the current task?
 └─ NO → SKIP
 ```
 
-### Skills Manifest (from skills-loaded.md):
+### Core Skills Manifest:
 
 | # | Skill | Category | Load Condition |
 |---|-------|----------|----------------|
-| 1 | `using-superpowers` | Core | ALWAYS load |
-| 2 | `planning-strategy` | Core | ALWAYS load |
+| 1 | `using-superpowers` | Core | ALWAYS load (if enabled) |
+| 2 | `planning-strategy` | Core | ALWAYS load (if enabled) |
 | 3 | `rust-coding-engine` | Rust | Rust development tasks |
 | 4 | `python-dev-skill` | Python | Python development tasks |
 | 5 | `reviewer-dev` | Code Quality | Code review or PR work |
@@ -50,24 +57,26 @@ Is this skill directly related to the current task?
 | 13 | `frontend-dev` | Development | Frontend/UI/CSS work |
 | 14 | `math-skill-system` | Math | Math, computation, or geometry tasks |
 
-## Phase 3: Load Decision Output
+## Phase 4: Load Decision Output
 
-Present your decisions in this format:
+Present your decisions:
 
 ```
-🔮 SKILL LOADING DECISIONS:
+🔮 CORE SKILL LOADING DECISIONS:
 
 ✅ LOAD: [skill-name] — [reason: direct match / anticipated need]
-⏭️ SKIP: [skill-name] — [reason: not relevant to current task]
+⏭️ SKIP: [skill-name] — [reason: not relevant / disabled by toggle]
+🚫 DISABLED: [skill-name] — [toggle = 0 in settings]
 ```
 
-## Phase 4: Execute Loading
+## Phase 5: Execute Loading
 
-After presenting decisions, invoke ONLY the skills marked ✅ LOAD using the Skill tool. Do NOT load skipped skills.
+Invoke ONLY the skills marked ✅ LOAD using the Skill tool.
 
 ## Rules
 
-- Core skills (using-superpowers, planning-strategy) are ALWAYS loaded. No reasoning needed.
+- Core skills (using-superpowers, planning-strategy) are ALWAYS loaded if their toggle is 1.
 - Every other skill MUST have a one-line justification for LOAD or SKIP.
+- Skills with toggle = 0 are NEVER loaded, regardless of relevance.
 - When in doubt, SKIP. Susy can always ask to load more.
-- Do NOT explore skills outside this manifest. Use `/skilltag` for full exploration.
+- Use `/skilltag-load` for tag-based exploration beyond core skills.
