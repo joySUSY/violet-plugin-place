@@ -212,32 +212,32 @@ function selectSkills(matches, settings, totalSkills) {
   const skillSet = new Set();
   const tagInfo = [];
 
-  // ALWAYS add core mandatory skills first
-  const mandatorySkills = [
+  // ALWAYS add core skills (minimal set for every prompt)
+  const coreSkills = [
     'using-superpowers',
-    'find-skills',
-    'codebase-documenter',
-    'continuous-learning-v2',
-    'continuous-learning',
-    'design-by-contract',
-    'dev-experts',
-    'docs-writer',
-    'doc-coauthoring',
-    'error-handling-skills',
-    'internal-comms',
-    'searxng',
-    'tdd-workflow',
-    'verification-before-completion',
-    'violet-core',
-    'workflows-plan',
-    'violet-vault',
-    'testing-strategies',
-    'schema-designer',
-    'schema-normalizer',
-    'senior-architect',
-    'critical-code-reviewer',
-    'quality-guardian-nicki'
+    'planning-strategy'
   ];
+
+  // Full skill set from skills-loaded.md (loaded on command only)
+  const fullMandatorySkills = [
+    'using-superpowers',
+    'planning-strategy',
+    'rust-coding-engine',
+    'python-dev-skill',
+    'reviewer-dev',
+    'refactor-dev',
+    'tdd-system',
+    'error-handling',
+    'js-dev-skill',
+    'deep-researcher',
+    'backend-dev',
+    'documentation-guidelines',
+    'frontend-dev',
+    'math-skill-system'
+  ];
+
+  // For auto-hook: only load core skills
+  const mandatorySkills = coreSkills;
 
   if (forceUsingSuperPowers) {
     for (const skill of mandatorySkills) {
@@ -354,43 +354,10 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   output += '## 🔮 STEP 2: Load Core Mandatory Skills\n\n';
 
   if (forceUsingSuperPowers) {
-    output += `**Mandatory Core Skills (${mandatoryCount} skills):**\n`;
-    output += 'These skills are ALWAYS loaded for quality assurance:\n\n';
-    output += '**Skill Discovery & Usage:**\n';
-    output += '🔮 - using-superpowers (teaches how to find and use skills)\n';
-    output += '🔍 - find-skills (discovers relevant skills for tasks)\n\n';
-    output += '**Documentation & Communication:**\n';
-    output += '📚 - codebase-documenter\n';
-    output += '📝 - docs-writer\n';
-    output += '✍️  - doc-coauthoring\n';
-    output += '💬 - internal-comms\n\n';
-    output += '**Learning & Growth:**\n';
-    output += '🌱 - continuous-learning-v2\n';
-    output += '📖 - continuous-learning\n\n';
-    output += '**Design & Architecture:**\n';
-    output += '🏗️  - design-by-contract\n';
-    output += '🗂️  - schema-designer\n';
-    output += '🔄 - schema-normalizer\n';
-    output += '🏛️  - senior-architect\n\n';
-    output += '**Development & Expertise:**\n';
-    output += '👨‍💻 - dev-experts\n';
-    output += '💜 - violet-core\n\n';
-    output += '**Error Handling & Safety:**\n';
-    output += '🛡️  - error-handling-skills\n\n';
-    output += '**Testing & Verification:**\n';
-    output += '🧪 - tdd-workflow\n';
-    output += '✅ - verification-before-completion\n';
-    output += '🎯 - testing-strategies\n\n';
-    output += '**Workflow & Planning:**\n';
-    output += '📋 - workflows-plan\n\n';
-    output += '**Security & Storage:**\n';
-    output += '🔐 - violet-vault\n\n';
-    output += '**Search & Research:**\n';
-    output += '🔎 - searxng\n\n';
-    output += '**Code Review & Quality:**\n';
-    output += '🔍 - critical-code-reviewer\n';
-    output += '👑 - quality-guardian-nicki\n\n';
-    output += '**ACTION:** Invoke ALL mandatory skills using Skill tool NOW.\n\n';
+    output += `**Core Skills (${mandatoryCount} skills — auto-loaded):**\n\n`;
+    output += '🔮 - using-superpowers\n';
+    output += '📐 - planning-strategy\n\n';
+    output += '**NOTE:** Only core skills are auto-loaded. Use `/skilltag` command to load the full skill set or explore additional skills.\n\n';
   }
 
   output += '---\n\n';
@@ -407,8 +374,7 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   output += `**Mandatory Core:** ${mandatoryCount} skills (always loaded)\n\n`;
 
   if (belowMinimum) {
-    output += `⚠️  **WARNING:** Below minimum! Need ${minSkills - skills.length} more skills.\n`;
-    output += '**ACTION:** Review using-superpowers and find-skills to identify additional relevant skills.\n\n';
+    output += `⚠️  Below minimum skill budget (${skills.length}/${minSkills}).\n\n`;
   }
 
   if (needsPermission) {
@@ -417,12 +383,10 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   }
 
   const additionalSkills = skills.filter(s => ![
-    'using-superpowers', 'find-skills', 'codebase-documenter', 'continuous-learning-v2',
-    'continuous-learning', 'design-by-contract', 'dev-experts', 'docs-writer',
-    'doc-coauthoring', 'error-handling-skills', 'internal-comms', 'searxng',
-    'tdd-workflow', 'verification-before-completion', 'violet-core', 'workflows-plan',
-    'violet-vault', 'testing-strategies', 'schema-designer', 'schema-normalizer',
-    'senior-architect', 'critical-code-reviewer', 'quality-guardian-nicki'
+    'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
+    'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
+    'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
+    'frontend-dev', 'math-skill-system'
   ].includes(s));
 
   if (additionalSkills.length > 0) {
@@ -434,41 +398,17 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   }
 
   output += '---\n\n';
-  output += '## 🧠 STEP 4: Intelligent Skill Enhancement\n\n';
+  output += '## ✅ STEP 4: Execute Task\n\n';
   output += '**INSTRUCTION TO VIOLET:**\n';
-  output += 'After loading mandatory skills and reviewing auto-detected skills:\n';
-  output += '1. Use using-superpowers and find-skills guidance to check if you need MORE skills\n';
-  output += '2. Consider the user\'s intent and requirements\n';
-  output += '3. Check conversation history and memory for context\n';
-  output += '4. If you identify additional relevant skills, load them using Skill tool\n';
-  output += '5. Record your skill loading decisions in your response\n\n';
-
-  output += '**Questions to Ask Yourself:**\n';
-  output += '- Does this task require skills not in the auto-detected list?\n';
-  output += '- Are there domain-specific skills I should load?\n';
-  output += '- Do I need planning/brainstorming skills before implementation?\n';
-  output += '- Should I load debugging/testing skills proactively?\n\n';
-
-  output += '---\n\n';
-  output += '## ✅ STEP 5: Execute Task\n\n';
-  output += '**INSTRUCTION TO VIOLET:**\n';
-
-  if (needsPermission) {
-    output += '⚠️  STOP! Ask for permission first before loading skills.\n\n';
-    output += 'If approved, invoke these skills:\n';
-  } else {
-    output += 'You MUST invoke the following skills using the Skill tool BEFORE responding:\n';
-  }
+  output += 'Load ONLY the mandatory skills listed below. Do NOT explore or load additional skills unless Susy explicitly requests it.\n\n';
 
   output += '\n**Mandatory Skills:**\n';
   for (const skill of skills) {
     if ([
-      'using-superpowers', 'find-skills', 'codebase-documenter', 'continuous-learning-v2',
-      'continuous-learning', 'design-by-contract', 'dev-experts', 'docs-writer',
-      'doc-coauthoring', 'error-handling-skills', 'internal-comms', 'searxng',
-      'tdd-workflow', 'verification-before-completion', 'violet-core', 'workflows-plan',
-      'violet-vault', 'testing-strategies', 'schema-designer', 'schema-normalizer',
-      'senior-architect', 'critical-code-reviewer', 'quality-guardian-nicki'
+      'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
+      'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
+      'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
+      'frontend-dev', 'math-skill-system'
     ].includes(skill)) {
       output += `- Skill("${skill}")\n`;
     }
@@ -485,9 +425,8 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   output += 'Then, and ONLY then, proceed with the actual task.\n\n';
 
   output += '**Remember:**\n';
-  output += '- Skills are NOT optional - they are mandatory for quality work\n';
-  output += '- If using-superpowers or find-skills suggest more skills, load them\n';
-  output += '- Record which skills you loaded and why\n';
+  output += '- Load ONLY the skills listed above\n';
+  output += '- Do NOT explore or load additional skills unless Susy explicitly asks\n';
   output += '- Follow skill instructions exactly\n\n';
 
   output += '---\n\n';
