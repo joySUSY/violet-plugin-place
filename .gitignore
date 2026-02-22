@@ -8,6 +8,7 @@ yarn-error.log*
 
 # Logs
 *.log
+*.jsonl
 logs/
 
 # OS files
@@ -22,3 +23,14 @@ Thumbs.db
 *.tmp
 *.temp
 .cache/
+
+# Privacy: never push personal skills content
+skills/
+!**/commands/*.md
+!**/skills/font-visualizer/SKILL.md
+
+# Privacy: never push personal data
+.env
+*.env.*
+secrets/
+credentials/
