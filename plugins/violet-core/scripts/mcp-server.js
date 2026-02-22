@@ -4,14 +4,26 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 const SERVER_NAME = "violet-ctx";
-const SERVER_VERSION = "1.0.0";
+const SERVER_VERSION = "2.0.0";
 
 function loadJSON(filename) {
-  const filepath = path.join(DATA_DIR, filename);
-  return JSON.parse(fs.readFileSync(filepath, "utf-8"));
+  const soulKey = process.env.VIOLET_SOUL_KEY;
+  const encName = filename.replace(/\.json$/, ".enc");
+  const encPath = path.join(DATA_DIR, encName);
+  if (soulKey && fs.existsSync(encPath)) {
+    const key = crypto.scryptSync(soulKey, "violet-soul-salt", 32);
+    const raw = fs.readFileSync(encPath);
+    const iv = raw.subarray(0, 16);
+    const ciphertext = raw.subarray(16);
+    const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
+    const decrypted = Buffer.concat([decipher.update(ciphertext), decipher.final()]);
+    return JSON.parse(decrypted.toString("utf-8"));
+  }
+  return JSON.parse(fs.readFileSync(path.join(DATA_DIR, filename), "utf-8"));
 }
 
 let rulesData = null;

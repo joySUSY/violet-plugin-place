@@ -1,6 +1,19 @@
 {
-  "description": "Violet Core — Smart soul engine with minimal token footprint",
+  "description": "Violet Core v2 — Soul engine with encryption, compact recovery, and minimal token footprint",
   "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/soul-engine.js\" --compact",
+            "timeout": 10,
+            "statusMessage": "Violet Core preserving identity before compact..."
+          }
+        ]
+      }
+    ],
     "SessionStart": [
       {
         "matcher": "startup",

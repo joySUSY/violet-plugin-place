@@ -1,0 +1,14 @@
+# Authors: Joysusy & Violet Klaudia 💖
+# Violet Core — Privacy protection for soul data
+
+# Plaintext soul data (encrypted .enc versions are committed instead)
+data/*.json
+
+# Keys and secrets
+*.key
+*.pem
+
+# Temp and debug
+*.tmp
+*.log
+node_modules/
