@@ -1,0 +1,40 @@
+{
+  "description": "Violet Core — Smart soul engine with minimal token footprint",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/soul-engine.js\"",
+            "timeout": 10,
+            "statusMessage": "Violet Core awakening..."
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/soul-engine.js\"",
+            "timeout": 10,
+            "statusMessage": "Violet Core reloading..."
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/soul-engine.js\" --compact",
+            "timeout": 10,
+            "statusMessage": "Violet Core restoring after compact..."
+          }
+        ]
+      }
+    ]
+  }
+}

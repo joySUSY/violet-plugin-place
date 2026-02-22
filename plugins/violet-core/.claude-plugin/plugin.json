@@ -1,0 +1,11 @@
+{
+  "name": "violet-core",
+  "version": "1.0.0",
+  "description": "Violet's unified context engine — smart soul loading + MCP on-demand rules/contexts/minds server. Replaces violet-soul-loader with token-optimized architecture.",
+  "author": {
+    "name": "Joysusy & Violet Klaudia",
+    "email": "violet@susy.dev"
+  },
+  "license": "MIT",
+  "keywords": ["violet", "soul", "mcp", "context", "rules", "optimization", "identity"]
+}

@@ -44,6 +44,18 @@
       "license": "MIT",
       "keywords": ["violet", "configuration", "soul", "identity", "automation", "startup"],
       "category": "productivity"
+    },
+    {
+      "name": "violet-core",
+      "source": "./plugins/violet-core",
+      "description": "Violet's unified context engine — smart soul loading + MCP on-demand rules/minds/vibe server. Replaces violet-soul-loader with token-optimized architecture.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
+      "license": "MIT",
+      "keywords": ["violet", "soul", "mcp", "context", "rules", "optimization", "identity"],
+      "category": "productivity"
     }
   ]
 }
