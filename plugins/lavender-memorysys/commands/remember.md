@@ -17,10 +17,10 @@ Extract the following fields from Susy's message. If a field is missing, use the
 |--------------|----------|-------------|--------------------------------------------------|
 | `title`      | yes      | —           | Short descriptive title for the memory            |
 | `content`    | yes      | —           | Full content body to persist                      |
-| `category`   | no       | `"general"` | One of: general, technical, emotional, project, decision, insight, debug |
+| `category`   | no       | `"discovery"` | One of: discovery, technical, emotional, project, decision, insight, debug |
 | `tags`       | no       | `[]`        | Comma-separated list of tags for retrieval         |
 | `importance` | no       | `5`         | Integer 1-10 where 10 is critical                  |
-| `project`    | no       | `"default"` | Project scope for the memory                       |
+| `project`    | no       | `"violet"` | Project scope for the memory                       |
 
 ## 2. Validate
 

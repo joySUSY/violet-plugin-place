@@ -28,6 +28,7 @@ Thumbs.db
 skills/
 !**/commands/*.md
 !**/skills/font-visualizer/SKILL.md
+!**/skills/memory-ops/SKILL.md
 
 # Privacy: never push personal data
 .env

@@ -19,7 +19,7 @@ Extract the search parameters from Susy's message:
 | `limit`   | no       | `10`        | Maximum number of results to return         |
 | `project` | no       | `null`      | Filter results to a specific project scope  |
 
-If Susy provides a raw `mem_id` (e.g., `mem_a1b2c3d4e5f6`) instead of a query, skip to Step 3 directly.
+If Susy provides a raw `memory_id` (e.g., `a1b2c3d4e5f6`) instead of a query, skip to Step 3 directly.
 
 ## 2. Search for Memories
 
@@ -56,7 +56,7 @@ When Susy selects a memory (by number or ID), call `lavender_recall`:
 
 ```
 lavender_recall({
-  "mem_id": "<selected memory ID>"
+  "memory_id": "<selected memory ID>"
 })
 ```
 

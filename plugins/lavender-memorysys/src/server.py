@@ -56,7 +56,10 @@ async def lavender_store(
 ) -> str:
     """Store a new memory with metadata and tags."""
     mgr = await get_manager()
-    tag_list = json.loads(tags) if isinstance(tags, str) else tags
+    try:
+        tag_list = json.loads(tags) if isinstance(tags, str) else tags
+    except (json.JSONDecodeError, TypeError):
+        tag_list = []
     mem_id = await mgr.store(
         title=title, content=content, category=category,
         project=project, tags=tag_list, importance=importance,
@@ -132,7 +135,10 @@ async def lavender_export(project: str = "") -> str:
 async def lavender_import(memories_json: str) -> str:
     """Import memories from JSON backup."""
     mgr = await get_manager()
-    memories = json.loads(memories_json)
+    try:
+        memories = json.loads(memories_json)
+    except (json.JSONDecodeError, TypeError):
+        return json.dumps({"error": "Invalid JSON input"})
     count = await mgr.import_all(memories)
     return json.dumps({"status": "imported", "count": count})
 

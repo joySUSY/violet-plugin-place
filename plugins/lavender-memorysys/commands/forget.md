@@ -15,7 +15,7 @@ Extract the memory identifier from Susy's message:
 
 | Field    | Required | Description                                         |
 |----------|----------|-----------------------------------------------------|
-| `mem_id` | yes      | The memory ID to forget (e.g., `mem_a1b2c3d4e5f6`)  |
+| `memory_id` | yes      | The memory ID to forget (e.g., `a1b2c3d4e5f6`)  |
 
 If Susy provides a search query instead of an ID, first run a `/recall` search to help them identify the correct memory, then return here once they have the ID.
 
@@ -25,13 +25,13 @@ Before deleting, call `lavender_recall` to fetch and display the memory:
 
 ```
 lavender_recall({
-  "mem_id": "<mem_id>"
+  "memory_id": "<memory_id>"
 })
 ```
 
 Show Susy the memory details:
 
-- **ID**: `<mem_id>`
+- **ID**: `<memory_id>`
 - **Title**: `<title>`
 - **Category**: `<category>` | **Importance**: `<importance>`
 - **Content preview**: first 150 characters of the content body
@@ -44,8 +44,8 @@ Ask Susy for explicit confirmation before proceeding:
 
 ```
 Are you sure you want to forget this memory?
-  "<title>" (ID: <mem_id>)
-Reply with "yes" or the confirmation token CONFIRM_DELETION_<mem_id> to proceed.
+  "<title>" (ID: <memory_id>)
+Reply with "yes" or the confirmation token CONFIRM_DELETION_<memory_id> to proceed.
 ```
 
 Do NOT proceed without Susy's explicit "yes", "confirm", or the `CONFIRM_DELETION_` token.
@@ -56,7 +56,7 @@ Once confirmed, call the `lavender_forget` MCP tool:
 
 ```
 lavender_forget({
-  "mem_id": "<mem_id>"
+  "memory_id": "<memory_id>"
 })
 ```
 
