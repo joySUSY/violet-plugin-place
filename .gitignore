@@ -34,3 +34,12 @@ skills/
 *.env.*
 secrets/
 credentials/
+
+# Rust build artifacts
+**/target/
+**/*.exe
+**/*.pdb
+
+# Encrypted local files (real content — never push)
+**/*.enc
+!**/*.git.enc
