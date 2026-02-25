@@ -126,16 +126,21 @@ class SQLiteStore:
     async def search_memories(
         self, query: str, limit: int = 20, project: str | None = None,
     ) -> list[dict[str, Any]]:
-        sql = "SELECT m.* FROM memories m JOIN memories_fts f ON m.rowid = f.rowid WHERE memories_fts MATCH ? AND m.archived = 0"
-        params: list[Any] = [query]
-        if project:
-            sql += " AND m.project = ?"
-            params.append(project)
-        sql += " ORDER BY rank LIMIT ?"
-        params.append(limit)
-        async with self.db.execute(sql, params) as cur:
-            rows = await cur.fetchall()
-        return [dict(r) for r in rows]
+        if not query or not query.strip():
+            return []
+        try:
+            sql = "SELECT m.* FROM memories m JOIN memories_fts f ON m.rowid = f.rowid WHERE memories_fts MATCH ? AND m.archived = 0"
+            params: list[Any] = [query]
+            if project:
+                sql += " AND m.project = ?"
+                params.append(project)
+            sql += " ORDER BY rank LIMIT ?"
+            params.append(limit)
+            async with self.db.execute(sql, params) as cur:
+                rows = await cur.fetchall()
+            return [dict(r) for r in rows]
+        except Exception:
+            return []
 
     async def recall_memory(self, mem_id: str) -> dict[str, Any] | None:
         async with self.db.execute(

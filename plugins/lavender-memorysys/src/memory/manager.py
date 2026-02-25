@@ -35,9 +35,6 @@ class MemoryManager:
         mind_active: str | None = None,
         session_id: str | None = None,
     ) -> str:
-        if self._embedding is not None:
-            await self._embedding.embed(f"{title} {content}")
-
         mem_id = await self._store.store_memory(
             title=title,
             content=content,
@@ -83,8 +80,11 @@ class MemoryManager:
         provider_health: dict[str, Any] = {"available": False}
         if self._embedding is not None:
             try:
-                await self._embedding.health_check()
-                provider_health = {"available": True, "provider": self._embedding.name}
+                healthy = await self._embedding.health_check()
+                if healthy:
+                    provider_health = {"available": True, "provider": self._embedding.name}
+                else:
+                    provider_health = {"available": False, "provider": self._embedding.name, "error": "health check failed"}
             except Exception as exc:
                 provider_health = {"available": False, "error": str(exc)}
         return {
