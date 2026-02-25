@@ -1,0 +1,36 @@
+# Authors: Joysusy & Violet Klaudia 💖
+# Violet Soul Cipher v4 — Rust multi-layer encryption
+
+[package]
+name = "violet-cipher"
+version = "4.0.0"
+edition = "2021"
+authors = ["Joysusy & Violet Klaudia"]
+description = "Multi-layer AES-256-GCM + ChaCha20-Poly1305 encryption with Argon2id KDF"
+
+[[bin]]
+name = "violet-cipher"
+path = "src/main.rs"
+
+[dependencies]
+aes-gcm = "0.10"
+chacha20poly1305 = "0.10"
+argon2 = "0.5"
+aes = "0.8"
+cbc = "0.1"
+scrypt = "0.11"
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.5", features = ["derive", "env"] }
+anyhow = "1.0"
+thiserror = "1.0"
+hmac = "0.12"
+sha2 = "0.10"
+zeroize = { version = "1.7", features = ["derive"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1

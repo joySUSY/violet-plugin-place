@@ -1,15 +1,18 @@
 // Authors: Joysusy & Violet Klaudia 💖
-// Violet Soul Cipher v3 — Dual-key AES-256-CBC encryption with multi-layer protection
+// Violet Soul Cipher v3→v4 — Rust-accelerated with JS fallback
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { execFileSync } = require("child_process");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 const LOCAL_SALT = "violet-soul-salt-local-2026";
 const GIT_SALT = "violet-soul-salt-git-2026";
 const OUTER_SALT = "violet-outer-shell-2026";
+
+const RUST_BIN = path.join(__dirname, "rust", "target", "release", "violet-cipher.exe");
 
 const TARGET_FILES = ["rules-index.json", "minds-index.json", "vibe-library.json"];
 
@@ -75,6 +78,12 @@ function loadJSONSecure(filename) {
   const localKey = process.env.VIOLET_SOUL_KEY;
   const encPath = path.join(DATA_DIR, filename.replace(/\.json$/, ".enc"));
   if (localKey && fs.existsSync(encPath)) {
+    if (fs.existsSync(RUST_BIN)) {
+      try {
+        const out = execFileSync(RUST_BIN, ["decrypt-file", "--key", localKey, "--file", encPath], { encoding: "utf-8", timeout: 10000 });
+        return JSON.parse(out);
+      } catch { /* Rust failed, fall through to JS */ }
+    }
     try {
       return JSON.parse(multiLayerDecrypt(localKey, LOCAL_SALT, fs.readFileSync(encPath)));
     } catch {
@@ -181,7 +190,7 @@ function main() {
     }
     process.exit(ok ? 0 : 1);
   } else {
-    console.log("Violet Soul Cipher v3 — Dual-key multi-layer encryption");
+    console.log("Violet Soul Cipher v3/v4 — Dual-key multi-layer encryption (Rust-accelerated)");
     console.log("Commands:");
     console.log("  encrypt-local [key]  — Encrypt data files with local key (real content, multi-layer)");
     console.log("  decrypt-local [key]  — Decrypt .enc files to .json with local key");
