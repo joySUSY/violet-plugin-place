@@ -6,5 +6,5 @@
     "name": "Joysusy & Violet Klaudia"
   },
   "license": "MIT",
-  "capabilities": ["mcp", "hooks", "commands", "agents", "skills"]
+  "keywords": ["memory", "sqlite", "fts5", "embeddings", "mcp", "lavender"]
 }

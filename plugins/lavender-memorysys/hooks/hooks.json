@@ -1,21 +1,41 @@
 {
+  "description": "Lavender-MemorySys session hooks — zero-inject context loading and session persistence",
   "hooks": {
     "SessionStart": [
       {
-        "type": "command",
-        "command": "uv run --directory ./src session_hook.py start",
-        "description": "Inject 3-line session context summary from Lavender-MemorySys on session start",
-        "timeout_ms": 10000,
-        "on_failure": "ignore"
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}/src\" session_hook.py start",
+            "timeout": 10,
+            "statusMessage": "Lavender loading session context..."
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}/src\" session_hook.py start",
+            "timeout": 10,
+            "statusMessage": "Lavender restoring after compact..."
+          }
+        ]
       }
     ],
     "Stop": [
       {
-        "type": "command",
-        "command": "uv run --directory ./src session_hook.py stop",
-        "description": "Save session summary and key decisions to Lavender-MemorySys on session end",
-        "timeout_ms": 15000,
-        "on_failure": "ignore"
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}/src\" session_hook.py stop",
+            "timeout": 15,
+            "statusMessage": "Lavender saving session..."
+          }
+        ]
       }
     ]
   }

@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "lavender-memorysys": {
+      "type": "stdio",
       "command": "uv",
-      "args": ["run", "--directory", "./src", "server.py"],
-      "env": {}
+      "args": ["run", "--directory", "${CLAUDE_PLUGIN_ROOT}/src", "server.py"]
     }
   }
 }
