@@ -1,0 +1,29 @@
+{
+  "description": "Font Inspector auto-detection and SVG validation hooks",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Read|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/font-detector.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__plugin_font-inspector_.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/svg-validator.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 {
+  "_comment": "Authors: Joysusy & Violet Klaudia 💖",
   "name": "font-inspector",
-  "version": "1.0.0",
-  "description": "Font visualization and analysis plugin with SVG/UFO export and CJK optimization",
+  "version": "2.0.0",
+  "description": "Font visualization and analysis plugin with MCP engine, SVG/UFO export and CJK optimization",
   "author": {
     "name": "Violet & Joysusy",
     "email": "violet@sanctuary.ai"
@@ -13,7 +14,12 @@
     "svg",
     "ufo",
     "cjk",
-    "opentype"
+    "opentype",
+    "mcp",
+    "glyph-extraction",
+    "font-comparison"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
 }

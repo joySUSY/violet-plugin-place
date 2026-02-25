@@ -1,39 +1,33 @@
+# Authors: Joysusy & Violet Klaudia 💖
 [package]
 name = "font-inspector"
-version = "1.0.0"
+version = "2.0.0"
 edition = "2021"
 authors = ["Violet & Joysusy"]
-description = "High-performance font analysis tool with SVG/UFO export"
+description = "High-performance font analysis tool with SVG/UFO export and MCP server"
+
+[lib]
+name = "font_inspector"
+path = "src/lib.rs"
 
 [[bin]]
 name = "font-inspector"
 path = "src/main.rs"
 
+[[bin]]
+name = "font-inspector-mcp"
+path = "src/mcp_server.rs"
+
 [dependencies]
-# Font parsing - zero-copy, blazing fast
 ttf-parser = "0.21"
-
-# UFO format support
 norad = "0.14"
-
-# Bézier curve mathematics
 kurbo = "0.11"
-
-# Serialization
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-
-# CLI
 clap = { version = "4.5", features = ["derive"] }
-
-# Error handling
 anyhow = "1.0"
 thiserror = "1.0"
-
-# Parallel processing for CJK fonts
 rayon = "1.10"
-
-# Progress bar
 indicatif = { version = "0.17", features = ["rayon"] }
 
 [dev-dependencies]

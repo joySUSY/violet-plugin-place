@@ -1,15 +1,14 @@
-mod extractor;
-mod svg_writer;
-mod types;
-mod ufo_writer;
-
+// Authors: Joysusy & Violet Klaudia 💖
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
 use std::fs;
 use std::path::PathBuf;
 use ttf_parser::Face;
 
-use types::{CharsetPreset, FontMetadata, FontReport, UnicodeRange};
+use font_inspector::extractor;
+use font_inspector::svg_writer;
+use font_inspector::ufo_writer;
+use font_inspector::types::{CharsetPreset, FontMetadata, FontReport, UnicodeRange};
 
 #[derive(Parser)]
 #[command(

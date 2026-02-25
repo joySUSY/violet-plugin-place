@@ -1,0 +1,8 @@
+{
+  "_comment": "Authors: Joysusy & Violet Klaudia 💖",
+  "font-inspector": {
+    "command": "${CLAUDE_PLUGIN_ROOT}/scripts/rust/target/release/font-inspector-mcp",
+    "args": [],
+    "env": {}
+  }
+}
