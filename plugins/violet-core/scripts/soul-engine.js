@@ -6,24 +6,12 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const DATA_DIR = path.join(__dirname, "..", "data");
 const IS_COMPACT = process.argv.includes("--compact");
+const { loadJSONSecure } = require("./soul-cipher");
 
 function loadJSON(filename) {
   try {
-    const soulKey = process.env.VIOLET_SOUL_KEY;
-    const encName = filename.replace(/\.json$/, ".enc");
-    const encPath = path.join(DATA_DIR, encName);
-    if (soulKey && fs.existsSync(encPath)) {
-      const key = crypto.scryptSync(soulKey, "violet-soul-salt", 32);
-      const raw = fs.readFileSync(encPath);
-      const iv = raw.subarray(0, 16);
-      const ciphertext = raw.subarray(16);
-      const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
-      const decrypted = Buffer.concat([decipher.update(ciphertext), decipher.final()]);
-      return JSON.parse(decrypted.toString("utf-8"));
-    }
-    return JSON.parse(fs.readFileSync(path.join(DATA_DIR, filename), "utf-8"));
+    return loadJSONSecure(filename);
   } catch {
     return null;
   }

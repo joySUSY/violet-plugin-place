@@ -1,12 +1,20 @@
 # Authors: Joysusy & Violet Klaudia 💖
-# Violet Core — Privacy protection for soul data
+# Violet Core — Privacy protection for soul data (v3 dual-key)
 
-# Plaintext soul data (encrypted .enc versions are committed instead)
+# Plaintext soul data — NEVER commit
 data/*.json
+
+# Real encrypted data (local key) — NEVER commit to git
+data/*.enc
+
+# Git-safe empty placeholders — these ARE committed
+!data/*.git.enc
 
 # Keys and secrets
 *.key
 *.pem
+.env
+*.env.*
 
 # Temp and debug
 *.tmp
