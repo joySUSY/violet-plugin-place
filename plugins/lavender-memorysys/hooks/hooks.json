@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "uv run --directory ./src session_hook.py start",
+        "description": "Inject 3-line session context summary from Lavender-MemorySys on session start",
+        "timeout_ms": 10000,
+        "on_failure": "ignore"
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "uv run --directory ./src session_hook.py stop",
+        "description": "Save session summary and key decisions to Lavender-MemorySys on session end",
+        "timeout_ms": 15000,
+        "on_failure": "ignore"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+# Authors: Joysusy & Violet Klaudia 💖
+[project]
+name = "lavender-memorysys"
+version = "1.0.0"
+description = "Token-efficient encrypted memory system for Violet"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.0.0",
+    "aiosqlite>=0.20.0",
+    "cryptography>=44.0.0",
+    "httpx>=0.28.0",
+    "pydantic>=2.10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

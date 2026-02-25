@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "lavender-memorysys": {
+      "command": "uv",
+      "args": ["run", "--directory", "./src", "server.py"],
+      "env": {}
+    }
+  }
+}
