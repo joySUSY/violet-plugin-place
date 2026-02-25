@@ -24,8 +24,8 @@
     {
       "name": "font-inspector",
       "source": "./plugins/font-inspector",
-      "description": "Font analysis and inspection tool with Rust + Python dual-language support",
-      "version": "1.0.0",
+      "description": "Font analysis MCP server with glyph comparison, coverage analysis, and hooks",
+      "version": "2.0.0",
       "author": {
         "name": "Violet & Susy"
       },
@@ -36,8 +36,8 @@
     {
       "name": "violet-core",
       "source": "./plugins/violet-core",
-      "description": "Violet's unified context engine — smart soul loading + MCP on-demand rules/minds/vibe server. Replaces violet-soul-loader with token-optimized architecture.",
-      "version": "1.0.0",
+      "description": "Violet's unified context engine — smart soul loading + MCP server + Rust cipher v4 multi-layer encryption.",
+      "version": "2.0.0",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
