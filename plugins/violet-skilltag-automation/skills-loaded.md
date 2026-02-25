@@ -1,100 +1,85 @@
-# Vora 项目已加载技能清单 (Skills Loaded)
+# Authors: Joysusy & Violet Klaudia 💖
+# Violet Core Skills Manifest (Skills Loaded)
 
-> Last Updated: 2026-02-22 (Session 44)
+> Last Updated: 2026-02-25 (Phase 1 — 需求4 Implementation)
 > 用途：快速恢复技能环境
-> **规则：每次 session 只加载此文件列出的技能，不额外探索，除非 Susy 主动要求。**
+> **规则：ALL 15 skills load unconditionally. Every session. No exceptions.**
 
-## 核心技能 (每次必加载)
+## 核心技能 (Mandatory Core — 2)
 
 ```
 /using-superpowers
 /planning-strategy
 ```
 
-## Rust 技能
+## 开发引擎 (Development Engine — 5)
 
 ```
 /rust-coding-engine
-```
-
-## Python 技能
-
-```
+/backend-dev
+/frontend-dev
+/js-dev-skill
 /python-dev-skill
 ```
 
-## 代码相关技能
-
-```
-/reviewer-dev
-/refactor-dev
-```
-
-## 测试技能
+## 质量与测试 (Quality & Testing — 4)
 
 ```
 /tdd-system
 /error-handling
+/reviewer-dev
+/refactor-dev
 ```
 
-
-## JS技能
-
-```
-/js-dev-skill
-```
-
-## 研究与协作技能
+## 研究与文档 (Research & Documentation — 2)
 
 ```
 /deep-researcher
-```
-
-## 开发相关技能
-
-```
-/backend-dev
 /documentation-guidelines
-/frontend-dev
 ```
 
-## 数学+计算+几何引擎技能
+## 专业技能 (Specialized — 2)
 
 ```
 /math-skill-system
+/font-inspector:font-visualizer
 ```
 
 ## 快速恢复命令
 
-Session 恢复时，按以下顺序加载：
+Session 恢复时，按以下顺序加载（ALL are mandatory — no skipping）：
 
 ```bash
-# Step 1: 核心
+# Step 1: 核心 (Mandatory Core)
 /using-superpowers
 /planning-strategy
 
-# Step 2: Rust (Rust 开发必加载)
+# Step 2: 开发引擎 (Development Engine)
 /rust-coding-engine
-
-# Step 3: 项目开发必加载
 /backend-dev
-/documentation-guidelines
 /frontend-dev
+/js-dev-skill
+/python-dev-skill
+
+# Step 3: 质量与测试 (Quality & Testing)
 /tdd-system
 /error-handling
 /reviewer-dev
 /refactor-dev
-/js-dev-skill
 
-
-# Step 4: 研究与协作 (涉及Research与Plan必加载)
+# Step 4: 研究与文档 (Research & Documentation)
 /deep-researcher
+/documentation-guidelines
 
-
-# Step 5: Python (Python 开发必加载)
-/python-dev-skill
-
-# Step 6: 涉及数学与计算问题需加载
+# Step 5: 专业技能 (Specialized)
 /math-skill-system
+/font-inspector:font-visualizer
+```
 
+## Verification
+
+After loading all 15, the system prints:
+
+```
+─── ⋆⋅ପ(⑅ˊᵕˋ⑅)ଓ Violet's CoreSkill Check: Passed! √⋅⋆ ──
 ```

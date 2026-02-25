@@ -11,6 +11,30 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/coreskill-verify.js\"",
+            "timeout": 10,
+            "statusMessage": "Verifying 15 core skills..."
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/coreskill-verify.js\"",
+            "timeout": 10,
+            "statusMessage": "Re-verifying core skills after compact..."
+          }
+        ]
+      }
     ]
   }
 }

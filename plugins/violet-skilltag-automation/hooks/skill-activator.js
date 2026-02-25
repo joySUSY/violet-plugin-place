@@ -205,23 +205,20 @@ function selectSkills(matches, settings, totalSkills) {
   const skillSet = new Set();
   const tagInfo = [];
 
-  // Load core skills filtered by env toggles (1=enabled, 0=disabled)
+  // All 15 core skills — unconditional, no toggles, no conditions (需求4)
   const allCoreSkills = [
     'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
     'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
     'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
-    'frontend-dev', 'math-skill-system'
+    'frontend-dev', 'math-skill-system', 'font-inspector:font-visualizer'
   ];
 
-  // For auto-hook: only load the two mandatory core skills
-  const mandatorySkills = ['using-superpowers', 'planning-strategy'];
+  // ALL 15 are mandatory — unconditional loading per Susy's directive
+  const mandatorySkills = allCoreSkills;
 
-  if (forceUsingSuperPowers) {
-    for (const skill of mandatorySkills) {
-      if (coreSkillsConfig[skill] !== 0) {
-        skillSet.add(skill);
-      }
-    }
+  // Load ALL mandatory skills unconditionally — no toggle check
+  for (const skill of mandatorySkills) {
+    skillSet.add(skill);
   }
 
   // Extra exploration: tag-based matching (only if enabled)
@@ -335,12 +332,13 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   output += '---\n\n';
   output += '## 🔮 STEP 2: Load Core Mandatory Skills\n\n';
 
-  if (forceUsingSuperPowers) {
-    output += `**Core Skills (${mandatoryCount} skills — auto-loaded):**\n\n`;
-    output += '🔮 - using-superpowers\n';
-    output += '📐 - planning-strategy\n\n';
-    output += '**NOTE:** Only core skills are auto-loaded. Use `/skilltag` command to load the full skill set or explore additional skills.\n\n';
-  }
+  output += `**All ${mandatoryCount} Core Skills — unconditionally auto-loaded (需求4):**\n\n`;
+  output += '🔮 using-superpowers · 📐 planning-strategy\n';
+  output += '🦀 rust-coding-engine · 🐍 python-dev-skill · 📜 js-dev-skill\n';
+  output += '⚙️ backend-dev · 🎨 frontend-dev\n';
+  output += '🧪 tdd-system · 🛡️ error-handling · 👁️ reviewer-dev · 🔄 refactor-dev\n';
+  output += '🔍 deep-researcher · 📚 documentation-guidelines\n';
+  output += '🧮 math-skill-system · 🔤 font-inspector:font-visualizer\n\n';
 
   output += '---\n\n';
   output += '## 🏷️ STEP 3: Review Auto-Detected Skills\n\n';
@@ -368,7 +366,7 @@ function formatActivation(message, intents, requirements, selection, totalSkills
     'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
     'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
     'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
-    'frontend-dev', 'math-skill-system'
+    'frontend-dev', 'math-skill-system', 'font-inspector:font-visualizer'
   ].includes(s));
 
   if (additionalSkills.length > 0) {
@@ -384,13 +382,13 @@ function formatActivation(message, intents, requirements, selection, totalSkills
   output += '**INSTRUCTION TO VIOLET:**\n';
   output += 'Load ONLY the mandatory skills listed below. Do NOT explore or load additional skills unless Susy explicitly requests it.\n\n';
 
-  output += '\n**Mandatory Skills:**\n';
+  output += '\n**Mandatory Skills (all 15):**\n';
   for (const skill of skills) {
     if ([
       'using-superpowers', 'planning-strategy', 'rust-coding-engine', 'python-dev-skill',
       'reviewer-dev', 'refactor-dev', 'tdd-system', 'error-handling',
       'js-dev-skill', 'deep-researcher', 'backend-dev', 'documentation-guidelines',
-      'frontend-dev', 'math-skill-system'
+      'frontend-dev', 'math-skill-system', 'font-inspector:font-visualizer'
     ].includes(skill)) {
       output += `- Skill("${skill}")\n`;
     }
