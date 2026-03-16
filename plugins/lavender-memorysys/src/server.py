@@ -20,7 +20,7 @@ from memory.manager import MemoryManager
 from providers.gemini_provider import GeminiProvider
 from providers.openai_provider import OpenAIProvider
 
-mcp = FastMCP("lavender-memorysys", version="1.0.0")
+mcp = FastMCP("lavender-memorysys")
 _manager: MemoryManager | None = None
 
 
