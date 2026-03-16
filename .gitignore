@@ -1,5 +1,16 @@
 # Authors: Joysusy & Violet Klaudia 💖
 
+# Development & Planning Documents (DO NOT COMMIT)
+PORTABLE-PLUGIN-GUIDE.md
+*.plan.md
+*_PLAN.md
+*_REVIEW*.md
+*_SUMMARY.md
+*_AUDIT*.md
+WAVE4_*.md
+.plan_records/
+_research/
+
 # Node modules
 node_modules/
 npm-debug.log*
