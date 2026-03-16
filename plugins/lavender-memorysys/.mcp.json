@@ -3,7 +3,7 @@
     "lavender-memorysys": {
       "type": "stdio",
       "command": "uv",
-      "args": ["run", "--directory", "${CLAUDE_PLUGIN_ROOT}/src", "server.py"]
+      "args": ["run", "--directory", "${CLAUDE_PLUGIN_ROOT}", "src/server.py"]
     }
   }
 }
