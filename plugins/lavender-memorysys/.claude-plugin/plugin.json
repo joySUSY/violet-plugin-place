@@ -1,7 +1,7 @@
 {
   "name": "lavender-memorysys",
   "description": "Token-efficient memory system for Violet — SQLite + FTS5 with multi-provider embeddings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Joysusy & Violet Klaudia"
   },

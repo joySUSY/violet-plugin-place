@@ -1,7 +1,7 @@
 # Authors: Joysusy & Violet Klaudia 💖
 [project]
 name = "lavender-memorysys"
-version = "1.0.0"
+version = "1.0.1"
 description = "Token-efficient encrypted memory system for Violet"
 requires-python = ">=3.12"
 dependencies = [
