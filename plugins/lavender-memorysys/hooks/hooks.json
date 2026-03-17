@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}\" src/session_hook.py start",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-hook.cmd\" start",
             "timeout": 10,
             "statusMessage": "Lavender loading session context..."
           }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}\" src/session_hook.py start",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-hook.cmd\" start",
             "timeout": 10,
             "statusMessage": "Lavender restoring after compact..."
           }
@@ -31,7 +31,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run --directory \"${CLAUDE_PLUGIN_ROOT}\" src/session_hook.py stop",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-hook.cmd\" stop",
             "timeout": 15,
             "statusMessage": "Lavender saving session..."
           }

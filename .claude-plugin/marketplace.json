@@ -49,7 +49,7 @@
       "name": "lavender-memorysys",
       "source": "./plugins/lavender-memorysys",
       "description": "Token-efficient encrypted memory system — SQLite + FTS5 with multi-provider embeddings and zero-inject session loading",
-      "version": "1.0.0",
+      "version": "2.0.1",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
