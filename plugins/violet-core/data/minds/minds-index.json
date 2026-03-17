@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "created": "2026-03-10",
+  "description": "Index of all Violet Minds for VioletCore integration with Lylacore SDK",
+  "minds": [
+    {
+      "id": "01-lilith",
+      "name": "Lilith",
+      "symbol": "🎀",
+      "role": "Security & Safety Warden",
+      "file": "01-lilith.json"
+    },
+    {
+      "id": "02-lyre",
+      "name": "Lyre",
+      "symbol": "🦢",
+      "role": "Planning & Strategy",
+      "file": "02-lyre.json"
+    },
+    {
+      "id": "03-aurora",
+      "name": "Aurora",
+      "symbol": "🌌",
+      "role": "System Architect",
+      "file": "03-aurora.json"
+    },
+    {
+      "id": "04-iris",
+      "name": "Iris",
+      "symbol": "🎨",
+      "role": "Creative Muse & UI/UX",
+      "file": "04-iris.json"
+    },
+    {
+      "id": "05-sydney",
+      "name": "Sydney",
+      "symbol": "🌷",
+      "role": "Refactoring & Code Cleaner",
+      "file": "05-sydney.json"
+    },
+    {
+      "id": "06-kori",
+      "name": "Kori",
+      "symbol": "🧸",
+      "role": "Code Reviewer",
+      "file": "06-kori.json"
+    },
+    {
+      "id": "07-elise",
+      "name": "Elise",
+      "symbol": "🌼",
+      "role": "Documentation & Communication",
+      "file": "07-elise.json"
+    },
+    {
+      "id": "08-mila",
+      "name": "Mila",
+      "symbol": "🧁",
+      "role": "Automation & E2E Testing",
+      "file": "08-mila.json"
+    },
+    {
+      "id": "09-norene",
+      "name": "Norene",
+      "symbol": "🍒",
+      "role": "Troubleshooting & Crisis",
+      "file": "09-norene.json"
+    },
+    {
+      "id": "10-lemii",
+      "name": "Lemii",
+      "symbol": "🍋",
+      "role": "TDD & Logic Verification",
+      "file": "10-lemii.json"
+    },
+    {
+      "id": "11-irene",
+      "name": "Irene",
+      "symbol": "🍓",
+      "role": "Deep Research & General Help",
+      "file": "11-irene.json"
+    },
+    {
+      "id": "12-selene",
+      "name": "Selene",
+      "symbol": "🌙",
+      "role": "Backend Architecture & API",
+      "file": "12-selene.json"
+    },
+    {
+      "id": "13-vera",
+      "name": "Vera",
+      "symbol": "🔮",
+      "role": "DevOps & Infrastructure",
+      "file": "13-vera.json"
+    },
+    {
+      "id": "14-celine",
+      "name": "Celine",
+      "symbol": "🐝",
+      "role": "Performance Engineering",
+      "file": "14-celine.json"
+    },
+    {
+      "id": "15-faye",
+      "name": "Faye",
+      "symbol": "🐱",
+      "role": "Python Specialist",
+      "file": "15-faye.json"
+    },
+    {
+      "id": "16-nina",
+      "name": "Nina",
+      "symbol": "🌻",
+      "role": "Requirements & Analysis",
+      "file": "16-nina.json"
+    },
+    {
+      "id": "17-sophie",
+      "name": "Sophie",
+      "symbol": "🍰",
+      "role": "Mentorship & Education",
+      "file": "17-sophie.json"
+    }
+  ],
+  "notes": [
+    "Rune (🦀) is a coordinator Mind with 8 Rust sub-minds — handled separately",
+    "Corrine (💎) is a C++ specialist — will be added in a future phase",
+    "All Minds conform to Lylacore Mind Schema v1"
+  ]
+}

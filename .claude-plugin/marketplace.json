@@ -58,15 +58,27 @@
       "category": "productivity"
     },
     {
-      "name": "lylacore-rust",
-      "source": "./plugins/lylacore-rust",
-      "description": "High-performance cryptographic library with Rust core and Python/Node.js bindings — AES-256-GCM encryption, Argon2id/PBKDF2/Scrypt key derivation",
+      "name": "lylacore-js",
+      "source": "./plugins/lylacore-js",
+      "description": "Lylacore JavaScript SDK — foundational identity architecture for AI agents with Mind Schema, COACH Protocol, and Soul Package Format",
+      "version": "1.0.0",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
+      "license": "MIT",
+      "keywords": ["lylacore", "agent-identity", "mind-schema", "coach-protocol", "soul-package", "javascript", "agent-memory", "claude-code-plugin", "ai-agent-memory", "long-term-memory"],
+      "category": "productivity"
+    },
+    {
+      "name": "lylacore-native",
+      "source": "./plugins/lylacore-native",
+      "description": "Lylacore Rust-native core — high-performance cryptographic primitives and COACH engine with Node.js/Python bindings (2-5x faster than JS)",
       "version": "0.1.0",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
       "license": "MIT",
-      "keywords": ["cryptography", "rust", "python", "nodejs", "encryption", "key-derivation", "aes-gcm"],
+      "keywords": ["lylacore", "rust", "cryptography", "coach-engine", "napi", "pyo3", "performance", "agent-memory", "claude-code-plugin", "ai-agent-memory", "long-term-memory"],
       "category": "development"
     }
   ]
