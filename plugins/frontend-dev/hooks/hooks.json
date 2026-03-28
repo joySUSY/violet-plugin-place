@@ -1,0 +1,105 @@
+{
+  "hooks": [
+    {
+      "type": "UserPromptSubmit",
+      "description": "Activates frontend-dev engine when the task involves UI, frontend, React, CSS, Tailwind, responsive design, accessibility, or component architecture.",
+      "conditions": {
+        "prompt_contains_any": [
+          "UI",
+          "frontend",
+          "front-end",
+          "React",
+          "component",
+          "CSS",
+          "Tailwind",
+          "responsive",
+          "layout",
+          "accessibility",
+          "a11y",
+          "WCAG",
+          "aria-",
+          "NextJS",
+          "Next.js",
+          "styled",
+          "animation",
+          "transition",
+          "modal",
+          "dropdown",
+          "navigation",
+          "sidebar",
+          "header",
+          "footer",
+          "card",
+          "button",
+          "form",
+          "input",
+          "select",
+          "table",
+          "grid",
+          "flexbox",
+          "breakpoint",
+          "mobile",
+          "tablet",
+          "desktop",
+          "dark mode",
+          "theme",
+          "hover",
+          "focus",
+          "SVG",
+          "icon",
+          "Apple HIG",
+          "HIG",
+          "shadcn",
+          "radix",
+          "headless"
+        ]
+      },
+      "actions": [
+        {
+          "action": "load_skill",
+          "target": "${CLAUDE_PLUGIN_ROOT}/SKILL.md"
+        },
+        {
+          "action": "notify",
+          "message": "frontend-dev engine active. Lumina standing by for UI architecture decisions."
+        }
+      ]
+    },
+    {
+      "type": "Stop",
+      "description": "Verifies design quality, accessibility compliance, and responsive integrity before finalizing frontend output.",
+      "checks": [
+        {
+          "id": "semantic-html",
+          "rule": "All generated markup uses semantic HTML5 elements (nav, main, section, article, aside, header, footer). No div-soup.",
+          "severity": "error"
+        },
+        {
+          "id": "accessibility-baseline",
+          "rule": "Interactive elements have visible focus indicators. Images have alt text. Forms have associated labels. Color is never the sole information carrier.",
+          "severity": "error"
+        },
+        {
+          "id": "spacing-system",
+          "rule": "Spacing values follow the 4pt/8pt grid system. No arbitrary pixel values (13px, 7px, 22px). Tailwind spacing utilities preferred.",
+          "severity": "warning"
+        },
+        {
+          "id": "responsive-coverage",
+          "rule": "Components handle mobile (320px), tablet (768px), and desktop (1280px) viewports. No horizontal overflow at any breakpoint.",
+          "severity": "warning"
+        },
+        {
+          "id": "component-separation",
+          "rule": "Business logic lives in hooks or server actions. Render components are pure presentation. No fetch calls inside JSX.",
+          "severity": "warning"
+        },
+        {
+          "id": "animation-restraint",
+          "rule": "Transitions use 150-300ms duration with ease-out timing. No infinite animations without user opt-in. Respects prefers-reduced-motion.",
+          "severity": "warning"
+        }
+      ]
+    }
+  ]
+}

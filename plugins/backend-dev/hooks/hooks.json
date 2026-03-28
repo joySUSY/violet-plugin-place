@@ -1,0 +1,27 @@
+{
+  "description": "Backend-dev engine lifecycle hooks. Architecture-first, prompt-only.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "DOMAIN: backend-dev\nIF task involves: API design, database schema, REST/GraphQL endpoints, concurrency, async workers, messaging queues, microservice boundaries, or backend architecture\nTHEN: Read ${CLAUDE_PLUGIN_ROOT}/SKILL.md before responding. Classify into one primary surface: api-design, database-architecture, concurrency-async, messaging, or service-topology.\nRATIONALE: Database schema must be sound before routes exist. API contracts must be defined before implementation.\nIF_SKIP: Risk building on an unsound data model or leaking business logic into controllers."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "VERIFY: If this session involved API or database design, did the response enforce database-first ordering and idempotent mutations?\nIF_NO: Continue and consult ${CLAUDE_PLUGIN_ROOT}/references/database-architecture.md and ${CLAUDE_PLUGIN_ROOT}/references/api-design.md before completing."
+          }
+        ]
+      }
+    ]
+  }
+}

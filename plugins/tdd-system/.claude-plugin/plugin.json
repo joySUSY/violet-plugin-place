@@ -1,0 +1,20 @@
+{
+  "name": "tdd-system",
+  "version": "1.0.0",
+  "description": "Verification-first development engine. Red-Green-Refactor, testing pyramid, regression memory loop, and agentic evaluation. Use when writing tests, fixing bugs, or validating AI-generated code.",
+  "author": { "name": "Joysusy & Violet Klaudia" },
+  "license": "MIT",
+  "keywords": [
+    "tdd",
+    "testing",
+    "verification",
+    "red-green-refactor",
+    "regression",
+    "test-pyramid",
+    "evaluation",
+    "cross-language"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "hooks": "./hooks/hooks.json"
+}

@@ -1,5 +1,5 @@
 {
-  "description": "Violet Skill Auto-Activator - Analyzes user prompts and suggests relevant skills",
+  "description": "Violet Skill System v4.3 — Cross-plugin routing coordinator + skill activation",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -20,7 +20,7 @@
             "type": "command",
             "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/coreskill-verify.js\"",
             "timeout": 10,
-            "statusMessage": "Verifying 15 core skills..."
+            "statusMessage": "Verifying 19 core skills..."
           }
         ]
       },

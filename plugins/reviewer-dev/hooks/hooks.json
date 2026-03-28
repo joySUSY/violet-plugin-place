@@ -1,0 +1,27 @@
+{
+  "description": "Reviewer-dev engine lifecycle hooks. Evidence-first, prompt-only.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "DOMAIN: reviewer-dev\nIF task involves: code review, PR review, security audit, OWASP analysis, quality gate enforcement, or vulnerability assessment\nTHEN: Read ${CLAUDE_PLUGIN_ROOT}/SKILL.md before responding. Classify into one primary surface: code-review, security-audit, beautiful-code, guardian-protocols, ai-augmented-review, security-compliance, or evidence-anchored-review.\nRATIONALE: Reviews without evidence are opinions. Every finding must cite the specific code, the specific risk, and the specific fix.\nIF_SKIP: Risk shallow review that misses logic bugs while nitpicking formatting."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "VERIFY: If this session involved code review or security audit, was every finding anchored to specific evidence? Were prior ADRs or failure history consulted for high-stakes areas?\nIF_NO: Continue and consult ${CLAUDE_PLUGIN_ROOT}/references/evidence-anchored-review.md before completing."
+          }
+        ]
+      }
+    ]
+  }
+}

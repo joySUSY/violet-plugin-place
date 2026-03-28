@@ -56,9 +56,19 @@
       "priority": "S"
     },
     "javascript": {
-      "keywords": ["javascript", "js", "node", "nodejs", "npm", "yarn", "pnpm", "typescript", "ts"],
-      "skills": ["javascript-pro", "language-pro", "react-dev", "vercel-react-best-practices"],
+      "keywords": ["javascript", "js", "node", "nodejs", "npm", "yarn", "pnpm", "bun", "vite", "esbuild"],
+      "skills": ["js-dev-skill", "javascript-pro", "react-dev", "vercel-react-best-practices"],
       "priority": "A"
+    },
+    "typescript": {
+      "keywords": ["typescript", "ts", "type system", "类型系统", "generics", "泛型", "inference", "推断", "corsa", "tsgo"],
+      "skills": ["typescript-coding-engine", "mastering-typescript", "typescript-expert", "typescript-pro"],
+      "priority": "S"
+    },
+    "go": {
+      "keywords": ["go", "golang", "goroutine", "channel", "go module", "go mod", "gin", "fiber", "echo"],
+      "skills": ["go-coding-engine", "golang-expert", "golang-pro"],
+      "priority": "S"
     },
     "java": {
       "keywords": ["java", "jvm", "spring", "maven", "gradle", "kotlin"],

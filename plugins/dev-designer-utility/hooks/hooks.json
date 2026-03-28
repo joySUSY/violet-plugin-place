@@ -1,0 +1,105 @@
+{
+  "hooks": [
+    {
+      "type": "UserPromptSubmit",
+      "description": "Activates dev-designer-utility engine when the task involves design tokens, colors, fonts, typography, UX strategy, visual design systems, or design artifacts.",
+      "conditions": {
+        "prompt_contains_any": [
+          "design token",
+          "design system",
+          "color palette",
+          "color theory",
+          "typography",
+          "type scale",
+          "font",
+          "typeface",
+          "glyph",
+          "OpenType",
+          "TrueType",
+          "fontations",
+          "woff",
+          "spacing grid",
+          "4pt grid",
+          "8pt grid",
+          "dark mode algorithm",
+          "theme generation",
+          "theme factory",
+          "HSL",
+          "OKLab",
+          "OKLCH",
+          "contrast ratio",
+          "WCAG contrast",
+          "brand identity",
+          "brand naming",
+          "brand values",
+          "visual identity",
+          "design language",
+          "UX strategy",
+          "UX audit",
+          "usability",
+          "heuristic evaluation",
+          "wireframe",
+          "prototype",
+          "glassmorphism",
+          "Material Design",
+          "Apple HIG tokens",
+          "Cupertino",
+          "poster",
+          "data visualization",
+          "chart",
+          "SVG generation",
+          "generative art",
+          "icon system",
+          "asset pipeline",
+          "design artifact"
+        ]
+      },
+      "actions": [
+        {
+          "action": "load_skill",
+          "target": "${CLAUDE_PLUGIN_ROOT}/SKILL.md"
+        },
+        {
+          "action": "notify",
+          "message": "dev-designer-utility engine active. Aria standing by for design system decisions."
+        }
+      ]
+    },
+    {
+      "type": "Stop",
+      "description": "Verifies design consistency, token integrity, accessibility compliance, and mathematical precision before finalizing design output.",
+      "checks": [
+        {
+          "id": "token-grounding",
+          "rule": "All color, spacing, and typography values reference named design tokens. No raw hex codes, arbitrary pixel values, or unnamed magic numbers in output.",
+          "severity": "error"
+        },
+        {
+          "id": "contrast-compliance",
+          "rule": "Text-background color pairs meet WCAG 2.2 AA minimums: 4.5:1 for body text, 3:1 for large text (18px+) and UI components. Verified with OKLab perceptual model.",
+          "severity": "error"
+        },
+        {
+          "id": "type-scale-integrity",
+          "rule": "Font sizes derive from a mathematical scale (modular, perfect fourth, major third, or custom ratio). No arbitrary font-size values.",
+          "severity": "warning"
+        },
+        {
+          "id": "spacing-consistency",
+          "rule": "Spacing values follow the 4pt base grid. Permitted values: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128. Deviations require explicit justification.",
+          "severity": "warning"
+        },
+        {
+          "id": "palette-harmony",
+          "rule": "Generated color palettes maintain perceptual uniformity across lightness steps. Adjacent palette steps have consistent delta-L in OKLab space.",
+          "severity": "warning"
+        },
+        {
+          "id": "font-validation",
+          "rule": "Font engineering output is validated against OpenType spec. Glyph coordinates use integer values. Tables are correctly ordered. Subsetting preserves required glyphs.",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

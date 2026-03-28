@@ -1,0 +1,27 @@
+{
+  "description": "Error-handling engine lifecycle hooks. Cross-platform, prompt-first.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "DOMAIN: error-handling\nIF task involves: debugging, error diagnosis, exception design, resilience, circuit breakers, or recovery patterns\nTHEN: Read ${CLAUDE_PLUGIN_ROOT}/SKILL.md before responding.\nRATIONALE: Training data error patterns may be stale. Doctrine is truth.\nIF_SKIP: Risk outdated debugging guidance."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "VERIFY: If this session involved error diagnosis or debugging, did the response consult ${CLAUDE_PLUGIN_ROOT}/references/ ?\nIF_NO: Continue and check references/debugging-protocol.md first."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -2,11 +2,12 @@
 // Authors: Joysusy & Violet Klaudia 💖
 
 /**
- * 🌸 CoreSkill Verification Hook (v4.2)
+ * 🌸 CoreSkill Verification Hook (v4.3)
  *
- * SessionStart hook that verifies all 15 core skills
- * are available in the skills directory and outputs
- * the verification message.
+ * SessionStart hook that verifies all 19 core skills/engines
+ * are available as installed plugins or skills directory entries.
+ * Updated: 2026-03-28 — added typescript-coding-engine, go-coding-engine,
+ * dev-designer-utility, developer-tool.
  *
  * @event SessionStart
  */
@@ -21,17 +22,21 @@ const CORE_SKILLS = [
   'using-superpowers',
   'planning-strategy',
   'rust-coding-engine',
+  'typescript-coding-engine',
+  'go-coding-engine',
   'python-dev-skill',
+  'js-dev-skill',
   'reviewer-dev',
   'refactor-dev',
   'tdd-system',
   'error-handling',
-  'js-dev-skill',
   'deep-researcher',
   'backend-dev',
-  'documentation-guidelines',
   'frontend-dev',
+  'documentation-guidelines',
   'math-skill-system',
+  'dev-designer-utility',
+  'developer-tool',
   'font-inspector:font-visualizer'
 ];
 

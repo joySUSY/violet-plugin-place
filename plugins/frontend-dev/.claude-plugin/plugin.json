@@ -1,0 +1,48 @@
+{
+  "name": "frontend-dev",
+  "version": "1.0.0",
+  "description": "Frontend architecture, UI/UX design engineering, React patterns, Tailwind theming, Apple HIG standards, accessibility, and responsive design. The structural backbone of every pixel on screen.",
+  "author": "Joysusy & Violet Klaudia",
+  "license": "PROPRIETARY",
+  "engine_type": "skill",
+  "keywords": [
+    "react",
+    "tailwind",
+    "nextjs",
+    "ui-ux",
+    "apple-hig",
+    "accessibility",
+    "responsive"
+  ],
+  "entry": "../SKILL.md",
+  "hooks": "../hooks/hooks.json",
+  "commands": {
+    "prime/frontend-foundations": "../commands/prime/frontend-foundations.md"
+  },
+  "agents": {
+    "lumina": "../agents/lumina.md"
+  },
+  "cross_engine_boundaries": {
+    "design-system-tokens": "dev-designer-utility",
+    "js-runtime-logic": "js-dev-skill",
+    "typescript-types": "typescript-coding-engine",
+    "ci-cd-testing": "developer-tool"
+  },
+  "file_patterns": [
+    "*.tsx",
+    "*.jsx",
+    "*.css",
+    "*.scss",
+    "*.module.css",
+    "tailwind.config.*",
+    "postcss.config.*",
+    "next.config.*",
+    "app/**/*.tsx",
+    "components/**/*.tsx",
+    "pages/**/*.tsx"
+  ],
+  "portability": {
+    "root_var": "${CLAUDE_PLUGIN_ROOT}",
+    "paths_relative_to": "plugin.json"
+  }
+}

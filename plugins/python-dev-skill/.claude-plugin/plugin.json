@@ -1,0 +1,22 @@
+{
+  "name": "python-dev-skill",
+  "version": "1.0.0",
+  "description": "Python development engine covering idiomatic style, async/web (FastAPI/Django), project architecture, packaging (uv/pixi/ruff), scientific/ML stack, and multi-language interop (PyO3/Maturin). Architecture-first, not syntax-first.",
+  "author": { "name": "Joysusy & Violet Klaudia" },
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "fastapi",
+    "django",
+    "async",
+    "scientific",
+    "ML",
+    "packaging",
+    "uv",
+    "ruff",
+    "pyo3"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "hooks": "./hooks/hooks.json"
+}

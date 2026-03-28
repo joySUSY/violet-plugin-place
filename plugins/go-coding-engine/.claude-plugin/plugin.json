@@ -1,0 +1,24 @@
+{
+  "name": "go-coding-engine",
+  "version": "1.0.0",
+  "description": "Go development engine — architecture-first design, concurrency doctrine, explicit error handling, and production-grade toolchain integration for Claude Code agents",
+  "author": {
+    "name": "Joysusy & Violet Klaudia",
+    "url": "https://github.com/joysusy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "go",
+    "golang",
+    "concurrency",
+    "goroutines",
+    "channels",
+    "clean-architecture",
+    "error-handling",
+    "table-driven-tests",
+    "mcp-server",
+    "grpc",
+    "golangci-lint",
+    "pprof"
+  ]
+}
