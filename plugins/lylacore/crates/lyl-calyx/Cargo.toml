@@ -1,0 +1,28 @@
+# Authors: Joysusy & Violet Klaudia 💖
+# lyl-calyx — Lylacore MCP Server (Lylarch I-Layer: API Surface)
+
+[package]
+name = "lyl-calyx"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Pure Rust MCP server for Lylacore — crypto, COACH, and Mind topology"
+
+[dependencies]
+rmcp = { version = "1.2", features = ["server", "transport-io"] }
+schemars = "1"
+lyl-cipher = { path = "../lyl-cipher" }
+lyl-coach = { path = "../lyl-coach" }
+lyl-topo = { path = "../lyl-topo" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+base64 = "0.22"
+
+[[bin]]
+name = "lylacore"
+path = "src/main.rs"

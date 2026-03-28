@@ -1,9 +1,8 @@
 {
   "name": "js-dev-skill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript and Node.js runtime engine with React and modern toolchain",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",
-  "keywords": ["javascript", "nodejs", "react", "bun", "vite"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["javascript", "nodejs", "react", "bun", "vite"]
 }

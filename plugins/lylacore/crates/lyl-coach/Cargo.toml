@@ -1,0 +1,22 @@
+# Authors: Joysusy & Violet Klaudia 💖
+# coach-engine - COACH Protocol Implementation
+
+[package]
+name = "lyl-coach"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+regex = "1.12"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "coach_bench"
+harness = false

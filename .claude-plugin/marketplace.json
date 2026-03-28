@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Violet's curated collection of productivity and development plugins",
-    "version": "1.0.8"
+    "version": "1.0.9"
   },
   "plugins": [
     {
@@ -14,9 +14,18 @@
       "source": "./plugins/violet-skilltag-automation",
       "description": "Intelligent skill activation system with bilingual support and SAB priority",
       "version": "4.2.0",
-      "author": { "name": "Violet & Susy" },
+      "author": {
+        "name": "Violet & Susy"
+      },
       "license": "MIT",
-      "keywords": ["skills", "automation", "tags", "intelligent", "preprocessing", "bilingual"],
+      "keywords": [
+        "skills",
+        "automation",
+        "tags",
+        "intelligent",
+        "preprocessing",
+        "bilingual"
+      ],
       "category": "productivity"
     },
     {
@@ -24,9 +33,18 @@
       "source": "./plugins/font-inspector",
       "description": "Font analysis MCP server with glyph comparison, coverage analysis, and hooks",
       "version": "2.0.0",
-      "author": { "name": "Violet & Susy" },
+      "author": {
+        "name": "Violet & Susy"
+      },
       "license": "MIT",
-      "keywords": ["font", "typography", "inspector", "rust", "python", "analysis"],
+      "keywords": [
+        "font",
+        "typography",
+        "inspector",
+        "rust",
+        "python",
+        "analysis"
+      ],
       "category": "development"
     },
     {
@@ -34,9 +52,19 @@
       "source": "./plugins/violet-core",
       "description": "Violet's unified context engine — smart soul loading + MCP server + Rust cipher v4 multi-layer encryption.",
       "version": "2.0.0",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["violet", "soul", "mcp", "context", "rules", "optimization", "identity"],
+      "keywords": [
+        "violet",
+        "soul",
+        "mcp",
+        "context",
+        "rules",
+        "optimization",
+        "identity"
+      ],
       "category": "productivity"
     },
     {
@@ -44,9 +72,19 @@
       "source": "./plugins/lavender-memorysys",
       "description": "Token-efficient encrypted memory system — SQLite + FTS5 with multi-provider embeddings and zero-inject session loading",
       "version": "2.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["memory", "sqlite", "fts5", "encryption", "embeddings", "mcp", "lavender"],
+      "keywords": [
+        "memory",
+        "sqlite",
+        "fts5",
+        "encryption",
+        "embeddings",
+        "mcp",
+        "lavender"
+      ],
       "category": "productivity"
     },
     {
@@ -54,69 +92,130 @@
       "source": "./plugins/lylacore",
       "description": "Lylacore — Pure Rust foundational identity architecture for AI agents. Crypto, COACH protocol, and Mind topology via MCP.",
       "version": "0.3.0",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["lylacore", "lylarch", "rust", "mcp", "ai-agent-soul"],
+      "keywords": [
+        "lylacore",
+        "lylarch",
+        "rust",
+        "mcp",
+        "ai-agent-soul"
+      ],
       "category": "development"
     },
     {
       "name": "error-handling",
       "source": "./plugins/error-handling",
       "description": "Cross-language error handling, debugging protocol, and resilience architecture. Evidence-based ACH methodology + 6-phase fix protocol.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["error-handling", "debugging", "resilience", "circuit-breaker", "ACH"],
+      "keywords": [
+        "error-handling",
+        "debugging",
+        "resilience",
+        "circuit-breaker",
+        "ACH"
+      ],
       "category": "development"
     },
     {
       "name": "tdd-system",
       "source": "./plugins/tdd-system",
       "description": "Verification-first development engine. Red-Green-Refactor, testing pyramid, regression memory loop, and agentic evaluation.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["tdd", "testing", "verification", "red-green-refactor", "regression"],
+      "keywords": [
+        "tdd",
+        "testing",
+        "verification",
+        "red-green-refactor",
+        "regression"
+      ],
       "category": "development"
     },
     {
       "name": "python-dev-skill",
       "source": "./plugins/python-dev-skill",
       "description": "Python development engine. Idiomatic style, async/web (FastAPI/Django), scientific/ML, packaging (uv/ruff), and PyO3 interop.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["python", "fastapi", "django", "async", "ML", "uv", "pyo3"],
+      "keywords": [
+        "python",
+        "fastapi",
+        "django",
+        "async",
+        "ML",
+        "uv",
+        "pyo3"
+      ],
       "category": "development"
     },
     {
       "name": "js-dev-skill",
       "source": "./plugins/js-dev-skill",
       "description": "JavaScript and Node.js runtime engine. ES2025+, React architecture, Bun/Vite toolchain, and async/event-loop mastery.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["javascript", "nodejs", "react", "bun", "vite", "async"],
+      "keywords": [
+        "javascript",
+        "nodejs",
+        "react",
+        "bun",
+        "vite",
+        "async"
+      ],
       "category": "development"
     },
     {
       "name": "go-coding-engine",
       "source": "./plugins/go-coding-engine",
       "description": "Go development engine. Concurrency-first architecture, Clean Architecture patterns, TS7/Corsa compiler backend context, and Go ecosystem mastery.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["go", "golang", "concurrency", "goroutines", "clean-architecture", "corsa"],
+      "keywords": [
+        "go",
+        "golang",
+        "concurrency",
+        "goroutines",
+        "clean-architecture",
+        "corsa"
+      ],
       "category": "development"
     },
     {
       "name": "typescript-coding-engine",
       "source": "./plugins/typescript-coding-engine",
       "description": "TypeScript type-system engine. Strict posture, generics, inference, runtime validation, architecture decisions, and Rust/Tauri interop.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["typescript", "types", "generics", "inference", "interop", "corsa"],
+      "keywords": [
+        "typescript",
+        "types",
+        "generics",
+        "inference",
+        "interop",
+        "corsa"
+      ],
       "category": "development"
     },
     {
@@ -124,109 +223,182 @@
       "source": "./plugins/rust-coding-engine",
       "description": "Rust architecture engine. Ownership, async, interop (FFI/PyO3/NAPI/WASM/Tauri), production patterns, and ecosystem navigation.",
       "version": "1.0.0",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["rust", "ownership", "async", "tokio", "ffi", "interop", "axum"],
-      "category": "development"
-    },
-    {
-      "name": "developer-tool",
-      "source": "./plugins/developer-tool",
-      "description": "Developer tooling engine. Agentic systems, AI memory, shell/terminal, build/deploy, cross-platform, and data processing.",
-      "version": "1.0.0",
-      "author": { "name": "Joysusy & Violet Klaudia" },
-      "license": "MIT",
-      "keywords": ["developer-tools", "agentic", "memory", "shell", "build", "deploy"],
+      "keywords": [
+        "rust",
+        "ownership",
+        "async",
+        "tokio",
+        "ffi",
+        "interop",
+        "axum"
+      ],
       "category": "development"
     },
     {
       "name": "frontend-dev",
       "source": "./plugins/frontend-dev",
       "description": "Frontend architecture engine. React, Tailwind, accessibility, responsive design, Apple HIG, and cross-platform UI.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["react", "tailwind", "nextjs", "ui-ux", "accessibility", "responsive"],
+      "keywords": [
+        "react",
+        "tailwind",
+        "nextjs",
+        "ui-ux",
+        "accessibility",
+        "responsive"
+      ],
       "category": "development"
     },
     {
       "name": "backend-dev",
       "source": "./plugins/backend-dev",
       "description": "Backend architecture engine. API design, database architecture, concurrency patterns, messaging, and microservices.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["api", "database", "microservices", "concurrency", "rest", "graphql"],
+      "keywords": [
+        "api",
+        "database",
+        "microservices",
+        "concurrency",
+        "rest",
+        "graphql"
+      ],
       "category": "development"
     },
     {
       "name": "dev-designer-utility",
       "source": "./plugins/dev-designer-utility",
       "description": "Design systems engine. Typography engineering, color theory, UX strategy, font engineering, and visual design systems.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["design-systems", "typography", "color-theory", "ux", "font-engineering"],
+      "keywords": [
+        "design-systems",
+        "typography",
+        "color-theory",
+        "ux",
+        "font-engineering"
+      ],
       "category": "development"
     },
     {
       "name": "planning-strategy",
       "source": "./plugins/planning-strategy",
       "description": "Strategic planning engine. Architecture decisions, task decomposition, PRDs, ADRs, and recall-governed planning.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["planning", "architecture", "ADR", "PRD", "task-decomposition"],
+      "keywords": [
+        "planning",
+        "architecture",
+        "ADR",
+        "PRD",
+        "task-decomposition"
+      ],
       "category": "development"
     },
     {
       "name": "reviewer-dev",
       "source": "./plugins/reviewer-dev",
       "description": "Code review engine. Security auditing, evidence-anchored review, OWASP, and AI-augmented quality gates.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["code-review", "security", "OWASP", "audit", "quality-gate"],
+      "keywords": [
+        "code-review",
+        "security",
+        "OWASP",
+        "audit",
+        "quality-gate"
+      ],
       "category": "development"
     },
     {
       "name": "refactor-dev",
       "source": "./plugins/refactor-dev",
       "description": "Refactoring engine. Safe transformation, complexity reduction, performance optimization, and Strangler Fig migration.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["refactoring", "performance", "complexity", "migration", "optimization"],
+      "keywords": [
+        "refactoring",
+        "performance",
+        "complexity",
+        "migration",
+        "optimization"
+      ],
       "category": "development"
     },
     {
       "name": "documentation-guidelines",
       "source": "./plugins/documentation-guidelines",
       "description": "Documentation engine. BLUF technical writing, API docs, bilingual strategy, semantic linking, and doc-as-code.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["documentation", "technical-writing", "BLUF", "bilingual", "api-docs"],
+      "keywords": [
+        "documentation",
+        "technical-writing",
+        "BLUF",
+        "bilingual",
+        "api-docs"
+      ],
       "category": "development"
     },
     {
       "name": "deep-researcher",
       "source": "./plugins/deep-researcher",
       "description": "Research methodology engine. Codebase discovery, web research, fact-checking, semantic reasoning, and multi-source synthesis.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["research", "codebase-discovery", "fact-checking", "synthesis"],
+      "keywords": [
+        "research",
+        "codebase-discovery",
+        "fact-checking",
+        "synthesis"
+      ],
       "category": "development"
     },
     {
       "name": "math-skill-system",
       "source": "./plugins/math-skill-system",
       "description": "Mathematical computation engine. Symbolic computation (SymPy), statistics, data science, proofs, and numerical verification.",
-      "version": "1.0.1",
-      "author": { "name": "Joysusy & Violet Klaudia" },
+      "version": "1.0.2",
+      "author": {
+        "name": "Joysusy & Violet Klaudia"
+      },
       "license": "MIT",
-      "keywords": ["math", "sympy", "statistics", "data-science", "computation"],
+      "keywords": [
+        "math",
+        "sympy",
+        "statistics",
+        "data-science",
+        "computation"
+      ],
       "category": "development"
     }
   ]

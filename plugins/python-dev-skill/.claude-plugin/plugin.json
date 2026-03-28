@@ -1,9 +1,8 @@
 {
   "name": "python-dev-skill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Python development engine covering style, async, FastAPI, ML, and packaging",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",
-  "keywords": ["python", "fastapi", "async", "ML", "uv", "pyo3"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["python", "fastapi", "async", "ML", "uv", "pyo3"]
 }

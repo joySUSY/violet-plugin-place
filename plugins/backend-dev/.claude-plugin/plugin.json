@@ -1,9 +1,8 @@
 {
   "name": "backend-dev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Backend architecture engine with API design and database patterns",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",
-  "keywords": ["api", "database", "microservices", "concurrency"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["api", "database", "microservices", "concurrency"]
 }
