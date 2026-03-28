@@ -1,0 +1,27 @@
+{
+  "description": "Cross-platform, prompt-first lifecycle hooks for the typescript-coding-engine plugin shell.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If the task is TypeScript-heavy, classify it into exactly one primary TypeScript lane before acting: core-types, generics-and-inference, type-level-programming, runtime-validation, tooling-and-quality, testing, architecture, or interop. Keep type-system doctrine, runtime validation, and donor reservoirs clearly separated. Prefer strict, boundary-aware, no-shortcut posture."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before stopping, verify that no donor material was treated as a direct runtime mirror, no weak type shortcuts were normalized casually, and the current response still respects typescript-coding-engine shell boundaries, additive-only integration, and doctrine-first reasoning."
+          }
+        ]
+      }
+    ]
+  }
+}

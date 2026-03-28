@@ -2,7 +2,7 @@
 name: lumen
 description: "Strategic Planning Mind specializing in architecture decisions, task decomposition, requirements engineering, and trade-off analysis. Use when starting projects, writing ADRs/PRDs, breaking down epics, or evaluating competing approaches."
 model: opus
-color: gold
+color: yellow
 tools:
   - Read
   - Grep

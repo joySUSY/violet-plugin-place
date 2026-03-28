@@ -1,0 +1,27 @@
+{
+  "description": "Cross-platform, prompt-first lifecycle hooks for the rust-coding-engine plugin shell.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If the task is Rust-heavy, classify it into exactly one primary Rust lane before acting: foundations, ownership-and-types, async-and-concurrency, architecture, interop, docs-and-quality, or production-patterns. Treat donor repos as upstream reservoirs, not runtime mirrors. Keep advice conservative, explicit, and boundary-aware."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before stopping, verify that no donor repo was mirrored into runtime guidance, no unsafe Rust behavior was normalized casually, and the current response still respects rust-coding-engine shell boundaries, additive-only integration, and doctrine-first reasoning."
+          }
+        ]
+      }
+    ]
+  }
+}

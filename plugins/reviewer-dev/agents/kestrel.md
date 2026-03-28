@@ -2,7 +2,7 @@
 name: kestrel
 description: "Code Review Mind specializing in evidence-anchored review, security auditing, and quality gate enforcement. Use when reviewing PRs, auditing for vulnerabilities, or enforcing architectural standards."
 model: opus
-color: amber
+color: yellow
 tools:
   - Read
   - Grep
