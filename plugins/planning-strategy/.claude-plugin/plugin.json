@@ -1,17 +1,9 @@
 {
   "name": "planning-strategy",
-  "version": "1.0.0",
-  "description": "Strategic planning engine. Architecture Decision Records, product requirements, task decomposition, lattice coordination, and recall-governed planning. Use when starting projects, writing ADRs/PRDs, breaking epics into tasks, or evaluating trade-offs.",
+  "version": "1.0.1",
+  "description": "Strategic planning engine with ADRs and task decomposition",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",
-  "keywords": [
-    "architecture-decisions",
-    "task-decomposition",
-    "project-planning",
-    "ADR",
-    "PRD"
-  ],
-  "commands": "./commands",
-  "agents": "./agents",
+  "keywords": ["planning", "architecture", "ADR", "task-decomposition"],
   "hooks": "./hooks/hooks.json"
 }
