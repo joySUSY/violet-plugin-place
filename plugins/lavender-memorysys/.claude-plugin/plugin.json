@@ -6,5 +6,12 @@
     "name": "Joysusy & Violet Klaudia"
   },
   "license": "MIT",
-  "keywords": ["memory", "sqlite", "fts5", "embeddings", "mcp", "lavender"]
+  "keywords": [
+    "memory",
+    "sqlite",
+    "fts5",
+    "embeddings",
+    "mcp",
+    "lavender"
+  ]
 }
