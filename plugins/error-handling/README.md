@@ -20,7 +20,6 @@ error-handling/
 ├── README.md                       # This file
 ├── commands/prime/error-foundations.md
 ├── agents/morii.md                 # Diagnostic Mind
-├── hooks/hooks.json                # UserPromptSubmit + Stop
 ├── references/
 │   ├── philosophy.md               # Error taxonomy, fail-fast vs graceful
 │   ├── debugging-protocol.md       # 6-phase methodology + ACH

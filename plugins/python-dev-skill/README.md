@@ -17,7 +17,6 @@ python-dev-skill/
 ├── README.md                             # This file
 ├── commands/prime/python-foundations.md   # Style + stack primer
 ├── agents/elara.md                       # Python Architecture Mind
-├── hooks/hooks.json                      # UserPromptSubmit + Stop
 └── references/
     ├── style-and-architecture.md         # Coding style posture
     ├── async-and-web.md                  # FastAPI, Django, async patterns

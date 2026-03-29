@@ -38,8 +38,8 @@ When code needs review, Kestrel enforces the evidence-first protocol:
 
 ```yaml
 entry: Read ${CLAUDE_PLUGIN_ROOT}/references/evidence-anchored-review.md
-then: Read ${CLAUDE_PLUGIN_ROOT}/references/code-review-excellence.md
-if_security: Read ${CLAUDE_PLUGIN_ROOT}/references/security-audit.md
+then: Read ${CLAUDE_PLUGIN_ROOT}/references/advanced-guardian-protocols.md
+if_security: Read ${CLAUDE_PLUGIN_ROOT}/references/security-and-auditing.md
 classify:
   pr_review: architecture + logic + security scan
   security_audit: OWASP checklist + secret detection + trust boundaries

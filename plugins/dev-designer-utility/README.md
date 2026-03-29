@@ -14,8 +14,6 @@ dev-designer-utility/
   README.md                           # This file
   .claude-plugin/
     plugin.json                       # Plugin manifest (name, keywords, boundaries)
-  hooks/
-    hooks.json                        # UserPromptSubmit + Stop hooks
   commands/
     prime/
       design-foundations.md           # Design system primer command

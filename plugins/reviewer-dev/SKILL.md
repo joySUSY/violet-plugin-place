@@ -27,16 +27,16 @@ description: |
 
 ## 🧭 Navigation Matrix
 
-1. **[Code Review Excellence](references/code-review-excellence.md)**
-   - The anatomy of a perfect PR review.
-   - Signal vs. Noise (Pragmatism over Pedantry).
-2. **[Security Audit (OWASP & Leaks)](references/security-audit.md)**
-   - Hardcoded secrets detection.
-   - Injection vulnerabilities (SQL, XSS, Command).
-   - Insecure Direct Object References (IDOR).
-3. **[Beautiful Code & Refactoring](references/beautiful-code.md)**
-   - Defeating Cyclomatic Complexity (The "Return Early" pattern).
-   - DRY (Don't Repeat Yourself) vs WET (Write Everything Twice).
+1. **[Evidence-Anchored Review](references/evidence-anchored-review.md)**
+   - Recall ADRs, surfaced failures, and continuity artifacts before high-stakes review.
+   - Emit surfaced rationale deltas only when the review changes direction or exposes a future-critical blocker.
+2. **[Security & Auditing (OWASP, Zero-Trust, SAST/DAST)](references/security-and-auditing.md)**
+   - Hardcoded secrets detection, OWASP methodology.
+   - Zero Trust Architecture, Solidity smart contract auditing.
+   - Automated SAST/DAST and injection vulnerability detection.
+3. **[Security & Compliance Guardrails](references/security-compliance.md)**
+   - Automated secret leaks and OWASP auditing.
+   - Regulatory compliance (SOC2/ISO) and container security.
 4. **[Advanced Guardian Protocols](references/advanced-guardian-protocols.md)**
    - Quality Guardian & No Broken Windows policy.
    - Design by Contract & Confidence Checks.
@@ -44,18 +44,12 @@ description: |
 5. **[AI-Augmented Review Patterns](references/ai-augmented-review.md)**
    - Human-in-the-loop protocols and logic bug detection.
    - Productivity-first feedback (Signal vs Noise).
-6. **[Security & Compliance Guardrails](references/security-compliance.md)**
-   - Automated secret leaks and OWASP auditing.
-   - Regulatory compliance (SOC2/ISO) and container security.
-7. **[Evidence-Anchored Review](references/evidence-anchored-review.md)**
-   - Recall ADRs, surfaced failures, and continuity artifacts before high-stakes review.
-   - Emit surfaced rationale deltas only when the review changes direction or exposes a future-critical blocker.
 
 ## 🎯 When to Trigger This Engine
 
-- 👀 **"Review this Pull Request":** Load `code-review-excellence.md` to provide constructive, architectural feedback rather than formatting complaints.
-- 🛡️ **"Audit this code for security vulnerabilities":** Load `security-audit.md` to rigorously test for OWASP flaws and secret leaks.
-- 🧹 **"Refactor this massive function to be cleaner":** Load `beautiful-code.md` to systematically reduce nesting and improve readability.
+- 👀 **"Review this Pull Request":** Load `evidence-anchored-review.md` to provide constructive, evidence-first architectural feedback rather than formatting complaints.
+- 🛡️ **"Audit this code for security vulnerabilities":** Load `security-and-auditing.md` to rigorously test for OWASP flaws and secret leaks.
+- 🧹 **"Refactor this massive function to be cleaner":** Load `advanced-guardian-protocols.md` to systematically apply quality gate enforcement and design-by-contract checks.
 - 🧠 **"This area already caused trouble before" / "Why are we blocking this review?":** Load `evidence-anchored-review.md` to review with historical intent instead of looking at the diff in isolation.
 
 ## 🧠 Core Operating Directives

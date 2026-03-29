@@ -1,6 +1,6 @@
 {
   "name": "go-coding-engine",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Go development engine with concurrency, Clean Architecture, and TS7 Corsa context",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",

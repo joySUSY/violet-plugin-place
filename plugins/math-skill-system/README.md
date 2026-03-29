@@ -17,7 +17,6 @@ math-skill-system/
 ├── README.md
 ├── commands/prime/math-foundations.md
 ├── agents/theorem.md                # Computation Mind
-├── hooks/hooks.json
 ├── references/
 │   ├── symbolic-computation.md
 │   ├── applied-statistics.md

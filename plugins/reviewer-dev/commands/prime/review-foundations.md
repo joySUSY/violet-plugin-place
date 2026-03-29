@@ -15,9 +15,9 @@ allowed-tools: Read, Grep, Glob, Bash(git:*)
 1. **Context**: Understand what the change is trying to achieve and why
    - `${CLAUDE_PLUGIN_ROOT}/references/evidence-anchored-review.md`
 2. **Architecture**: Check for logic bugs and design violations
-   - `${CLAUDE_PLUGIN_ROOT}/references/code-review-excellence.md`
+   - `${CLAUDE_PLUGIN_ROOT}/references/advanced-guardian-protocols.md`
 3. **Security**: Scan for OWASP vulnerabilities and secret leaks
-   - `${CLAUDE_PLUGIN_ROOT}/references/security-audit.md`
+   - `${CLAUDE_PLUGIN_ROOT}/references/security-and-auditing.md`
 
 ### Classify Your Review Task
 

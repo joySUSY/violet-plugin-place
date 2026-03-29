@@ -1,3 +1,8 @@
+---
+description: "Prime Go foundations — load style posture, architecture patterns, and concurrency principles before writing Go code."
+allowed-tools: Read, Grep, Glob, Bash(git:*)
+---
+
 # Authors: Joysusy & Violet Klaudia
 # Go Foundations — Session Primer
 

@@ -17,7 +17,6 @@ deep-researcher/
 ├── README.md
 ├── commands/prime/research-protocol.md
 ├── agents/oracle.md                 # Research Mind
-├── hooks/hooks.json
 ├── references/ (12 reference docs)
 └── modules/
     ├── docs-seeker/                 # Real JS package for doc retrieval

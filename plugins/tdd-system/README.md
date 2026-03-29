@@ -19,7 +19,6 @@ tdd-system/
 ├── README.md                         # This file
 ├── commands/prime/tdd-cycle.md       # Red-Green-Refactor primer
 ├── agents/verity.md                  # Verification Mind
-├── hooks/hooks.json                  # UserPromptSubmit + Stop
 └── references/
     ├── tdd-workflow.md               # Red-Green-Refactor loop
     ├── tdd-principles.md             # Core TDD principles

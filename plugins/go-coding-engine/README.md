@@ -30,8 +30,6 @@ go-coding-engine/
   agents/
     silfira.md                  Architecture & design agent
     eunoia.md                   Concurrency & correctness agent
-  hooks/
-    hooks.json                  Auto-activation on Go file patterns
   references/
     style-and-idioms.md         Go Proverbs, Effective Go, naming, formatting
     concurrency-patterns.md     Goroutines, channels, select, sync, errgroup

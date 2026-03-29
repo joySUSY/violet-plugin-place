@@ -24,9 +24,22 @@ description: |
 | `backend-dev` | System Documentation | [`backend-dev/SKILL.md`](../backend-dev/SKILL.md) |
 | `frontend-dev` | Handoff & UI Comms | [`frontend-dev/SKILL.md`](../frontend-dev/SKILL.md) |
 
+## 🧭 Navigation Matrix
+
+1. **[Technical Writing](references/technical-writing.md)**
+   - READMEs, RFCs, and internal proposals.
+2. **[Codebase & API Documentation](references/codebase-and-api.md)**
+   - OpenAPI/Swagger specs, endpoint docs, auth flows.
+3. **[Handoff & Communications](references/handoff-and-comms.md)**
    - How to write elite Pull Requests (PRs).
    - Backend-to-Frontend handoff documents.
    - Incident Reports & decision records.
+4. **[Doc Engineering](references/doc-engineering.md)**
+   - Docs-as-Code setups, the Diataxis framework, automated documentation generation.
+5. **[Multi-Language Docs](references/multi-language-docs.md)**
+   - Bilingual documentation production.
+6. **[Semantic Linking](references/semantic-linking.md)**
+   - Cross-document linking and navigation structure.
 
 ## 🎯 When to Trigger This Engine
 

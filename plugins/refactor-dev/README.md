@@ -17,7 +17,6 @@ refactor-dev/
 ├── README.md
 ├── commands/prime/refactor-safe.md
 ├── agents/clarity.md                  # Transformation Mind
-├── hooks/hooks.json
 └── references/
     ├── safe-refactoring.md
     ├── complexity-patterns.md

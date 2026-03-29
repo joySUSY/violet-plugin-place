@@ -1,15 +1,6 @@
 ---
 name: math-skill-system
-description: |
-  Master engineer's guide to applied Mathematics & Analytical Computing | 数学与分析计算
-
-  Definitive protocols for symbolic computation, topological analysis, and mathematical modeling. | 符号计算、拓扑分析和数学建模的权威协议。
-
-  ## 🔬 Research & Modernity (2026): Topological Analytics | 研究与现代性 (2026)：拓扑分析
-
-  - **Markov Topology Orchestration**: Using 2026 topological models to predict system-state transitions and identify latent bottlenecks in distributed networks. | **马尔可夫拓扑编排**: 使用 2026 拓扑模型预测系统状态转换，并识别分布式网络中的潜在瓶颈。
-  - **Formal Metric Verification**: Automated validation of mathematical models against formal specifications via zero-knowledge proof (ZKP) protocols. | **形式化指标验证**: 通过零知识证明（ZKP）协议，根据形式化规范自动验证数学模型。
-  Use when designing data algorithms, running formal mathematical proofs, calculating complex system bounds, or performing numerical benchmarking. Enforces "Mathematical Intuition first," preventing brute-force coding where an algebraic solution exists.
+description: "Mathematical computation engine. Symbolic math (SymPy), statistics, data science, proofs, and numerical verification."
 ---
 
 ### 🔗 Cross-Engine Navigation — 跨引擎导航

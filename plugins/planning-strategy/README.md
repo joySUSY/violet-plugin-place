@@ -17,7 +17,6 @@ planning-strategy/
 ├── README.md                                 # This file
 ├── commands/prime/planning-foundations.md     # Plan-before-code primer + ADR template
 ├── agents/lumen.md                           # Strategic Planning Mind
-├── hooks/hooks.json                          # UserPromptSubmit + Stop
 └── references/
     ├── product-requirements.md               # PRD frameworks, testable constraints
     ├── architecture-decisions.md             # ADR format, trade-off analysis

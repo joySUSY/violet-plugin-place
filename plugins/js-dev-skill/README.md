@@ -19,7 +19,6 @@ js-dev-skill/
 ├── README.md                          # This file
 ├── commands/prime/js-runtime.md       # Runtime primer + TS boundary
 ├── agents/fika.md                     # JS Runtime Mind
-├── hooks/hooks.json                   # UserPromptSubmit + Stop
 ├── references/
 │   ├── react-architecture.md          # React patterns, hooks, server components
 │   ├── advanced-node.md               # Node.js design patterns

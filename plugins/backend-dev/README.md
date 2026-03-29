@@ -17,7 +17,6 @@ backend-dev/
 ├── README.md                            # This file
 ├── commands/prime/backend-foundations.md # API-first + DB-first primer
 ├── agents/seren.md                      # Backend Architecture Mind
-├── hooks/hooks.json                     # UserPromptSubmit + Stop
 └── references/
     ├── database-architecture.md         # Schemas, indexes, migrations
     ├── api-design.md                    # REST/GraphQL contracts

@@ -17,22 +17,18 @@ reviewer-dev/
 ├── README.md                                 # This file
 ├── commands/prime/review-foundations.md       # Evidence-first review primer
 ├── agents/kestrel.md                         # Code Review Mind
-├── hooks/hooks.json                          # UserPromptSubmit + Stop
 └── references/
-    ├── code-review-excellence.md             # PR review anatomy, signal vs noise
-    ├── security-audit.md                     # OWASP, secret detection, IDOR
-    ├── beautiful-code.md                     # Cyclomatic complexity, DRY
-    ├── advanced-guardian-protocols.md         # Quality guardian, design by contract
-    ├── ai-augmented-review.md                # Human-in-the-loop, AI output review
-    ├── security-compliance.md                # SOC2, ISO, container security
     ├── evidence-anchored-review.md           # History-aware review methodology
-    └── security-and-auditing.md              # SAST/DAST, zero-trust, Solidity
+    ├── security-and-auditing.md              # OWASP, zero-trust, SAST/DAST, Solidity
+    ├── security-compliance.md                # SOC2, ISO, container security
+    ├── advanced-guardian-protocols.md         # Quality guardian, design by contract
+    └── ai-augmented-review.md                # Human-in-the-loop, AI output review
 ```
 
 ## When This Engine Activates
 
-- Reviewing a pull request -> `code-review-excellence.md`
-- Security audit of code -> `security-audit.md`
+- Reviewing a pull request -> `evidence-anchored-review.md`
+- Security audit of code -> `security-and-auditing.md`
 - Reviewing code in a historically fragile area -> `evidence-anchored-review.md`
 - Need full review with security focus -> activate `kestrel` agent
 

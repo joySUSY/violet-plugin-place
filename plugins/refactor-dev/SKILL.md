@@ -1,7 +1,7 @@
 ---
 name: refactor-dev
 description: |
-  Master engineer's guide to performance optimization, algorthmic analysis, and safe legacy code refactoring. Use when a system is experiencing latency bottlenecks (N+1 queries, memory leaks, O(N^2) loops), when tasked with modernizing a monolithic legacy codebase (Strangler Fig pattern), or when hunting down dead code.
+  Master engineer's guide to performance optimization, algorithmic analysis, and safe legacy code refactoring. Use when a system is experiencing latency bottlenecks (N+1 queries, memory leaks, O(N^2) loops), when tasked with modernizing a monolithic legacy codebase (Strangler Fig pattern), or when hunting down dead code.
 ---
 
 # 🚀 Refactor & Performance Engine: The Humanizer Approach

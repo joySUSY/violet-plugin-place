@@ -17,7 +17,6 @@ documentation-guidelines/
 ├── README.md
 ├── commands/prime/doc-foundations.md
 ├── agents/calliope.md              # Documentation Mind
-├── hooks/hooks.json
 ├── references/
 │   ├── codebase-and-api.md
 │   ├── handoff-and-comms.md

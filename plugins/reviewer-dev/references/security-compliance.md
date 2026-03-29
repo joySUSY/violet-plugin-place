@@ -26,5 +26,5 @@ Assume every code change is a potential entry point. Focus on data sanitization 
 ---
 
 ## 📚 References | 参考文献
-- [Security Audit Handbook](security-audit.md)
+- [Security Audit Handbook](security-and-auditing.md)
 - [Vulnerability Management Standard](references/security-and-auditing.md)

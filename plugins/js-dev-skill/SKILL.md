@@ -1,15 +1,6 @@
 ---
 name: js-dev-skill
-description: |
-  Master engineer's guide to Modern# JavaScript & TypeScript Excellence | JavaScript 与 TypeScript 卓越实践
-
-Definitive protocols for high-scale, type-safe development across the JS/TS ecosystem. | 在 JS/TS 生态系统中进行大规模、类型安全开发的权威协议。
-
-## 🔬 Research & Modernity (2026): Type-Safe Synthesis | 研究与现代性 (2026)：类型安全合成
-
-- **Cross-Layer Type Mapping**: Real-time extraction and alignment of types between Rust (Specta) and TypeScript (Zod) via 2026 `schema-hub` engines. | **跨层类型映射**: 通过 2026 `schema-hub` 引擎实时提取和对齐 Rust (Specta) 和 TypeScript (Zod) 之间的类型。
-- **Agentic Telemetry Injection**: Automated injection of observability and telemetry hooks into TS modules for real-time production monitoring. | **智能体遥测注入**: 自动向 TS 模块注入可观测性和遥测挂钩，实现实时生产监控。
-Use when architecting TS monorepos, writing React Server Components (RSC), enforcing strict type safety (Zod/Discriminated Unions), or optimizing build tooling (Bun/Vite). Replaces legacy JS patterns with elite, fail-safe TS engineering.
+description: "JavaScript and Node.js runtime engine. ES2025+, React architecture, Bun/Vite toolchain, and async/event-loop mastery."
 ---
 
 ### 🔗 Cross-Engine Navigation — 跨引擎导航

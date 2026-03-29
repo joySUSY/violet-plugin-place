@@ -14,8 +14,6 @@ frontend-dev/
   README.md                         # This file
   .claude-plugin/
     plugin.json                     # Plugin manifest (name, keywords, boundaries)
-  hooks/
-    hooks.json                      # UserPromptSubmit + Stop hooks
   commands/
     prime/
       frontend-foundations.md       # UI architecture primer command
