@@ -12,8 +12,8 @@
     {
       "name": "violet-skilltag-automation",
       "source": "./plugins/violet-skilltag-automation",
-      "description": "Intelligent skill activation system with bilingual support and SAB priority",
-      "version": "4.2.0",
+      "description": "Context-aware skill routing coordinator with workflow phase detection",
+      "version": "4.3.0",
       "author": {
         "name": "Violet & Susy"
       },
