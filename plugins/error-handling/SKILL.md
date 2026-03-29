@@ -12,6 +12,8 @@ version: "1.0.0"
 | `refactor-dev` | Code Hygiene & Deslop | [`refactor-dev/SKILL.md`](../refactor-dev/SKILL.md) |
 | `dev-designer-utility` | UI Accessibility & Layout | [`dev-designer-utility/SKILL.md`](../dev-designer-utility/SKILL.md) |
 | `backend-dev` | System Resilience | [`backend-dev/SKILL.md`](../backend-dev/SKILL.md) |
+| `go-coding-engine` | Go Error Idioms | [`go-coding-engine/SKILL.md`](../go-coding-engine/SKILL.md) |
+| `typescript-coding-engine` | TS Error Boundaries | [`typescript-coding-engine/SKILL.md`](../typescript-coding-engine/SKILL.md) |
 
 ---
 

@@ -22,6 +22,8 @@ Comprehensive standards for scalable, high-performance, and resilient backend sy
 | `error-handling` | System Resilience & Recovery | [`error-handling/SKILL.md`](../error-handling/SKILL.md) |
 | `dev-designer-utility` | Schema Visuals & Icons | [`dev-designer-utility/SKILL.md`](../dev-designer-utility/SKILL.md) |
 | `python-dev-skill` | API Implementation (FastAPI) | [`python-dev-skill/SKILL.md`](../python-dev-skill/SKILL.md) |
+| `go-coding-engine` | Go Backend Services | [`go-coding-engine/SKILL.md`](../go-coding-engine/SKILL.md) |
+| `typescript-coding-engine` | TS API Types | [`typescript-coding-engine/SKILL.md`](../typescript-coding-engine/SKILL.md) |
 
 ---
 

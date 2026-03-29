@@ -1,13 +1,30 @@
 {
-  "description": "Cross-platform, prompt-first lifecycle hooks for the developer-tool plugin shell.",
   "hooks": {
-    "UserPromptSubmit": [
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/check-deps.sh\"",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-start-prime.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
       {
         "matcher": "*",
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "If the incoming task belongs to developer-tool, classify it into exactly one primary surface before acting: ai-agent-memory, agentic-system-basis, shell-and-terminal, build-and-deploy, cross-platform-development, or tool-ecosystem. Keep doctrine, runtime shell, and donor reservoirs explicitly separated. Prefer conservative, non-destructive posture."
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/precompact-handoff.sh\"",
+            "timeout": 5
           }
         ]
       }
@@ -17,8 +34,9 @@
         "matcher": "*",
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "Before stopping, verify that no donor repo was treated as a runtime mirror, no destructive behavior was normalized, and the current response still respects developer-tool shell laws, surface boundaries, and additive-only integration posture."
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/stop-review.sh\"",
+            "timeout": 5
           }
         ]
       }

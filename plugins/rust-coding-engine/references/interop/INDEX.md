@@ -1,4 +1,5 @@
 # Rust Interop Index
+# Authors: Joysusy & Violet Klaudia 💖
 
 ## Purpose
 
@@ -13,10 +14,8 @@ Use this category when the task is about:
 
 ## Source Provenance
 
-- **Primary source:** current canonical interop subtree under `references/interop/`
-- **Derived from:** major interop donor families (Rust FFI, PyO3, NAPI-RS, wasm-bindgen, ts-rs/tsify, Tauri) plus local doctrine synthesis
-- **Upstream URL:** not applicable as a synthesized local navigation index
-- **Freshness status:** canonical local index aligned to the current Rust interop subtree
+- **Primary source:** `references/interop/` canonical subtree
+- **Derived from:** Rust FFI, PyO3, NAPI-RS, wasm-bindgen, ts-rs/tsify, Tauri donor families plus local doctrine synthesis
 
 ---
 
@@ -48,18 +47,38 @@ This index also owns interop testing and audit discipline for all of these lanes
 
 ---
 
-## Reading Order
+## Reading Paths
 
-1. `rust-ffi-and-interop-overview.md`
-2. `boundary-activation-model.md` if the lane is still unclear
-3. then lane-specific doctrine:
-   - C/C++ -> `rust-ffi-mastery-c-cpp-deep-dive.md`
-   - Python -> `rust-pyo3-maturin-bindings.md`
-   - Node -> `rust-node-native-addon-posture.md`
-   - TS/WASM -> `rust-typescript-bridge-patterns.md`, `wasm-bindgen-posture.md`
-   - Tauri -> `rust-tauri-core-shell-and-ipc-boundaries.md`
-4. `rust-cross-language-workflows.md` when the system spans multiple surfaces
-5. `rust-interop-testing-and-audit-discipline.md` when proof/audit is central
+**First time crossing a language boundary?** Start with the FFI overview, then the boundary activation model. These two build the mental scaffolding before you touch any specific lane.
+
+**Know your target language already?** Jump straight to the lane-specific doc (see Problem-Pressure Routes below), then circle back to cross-language workflows when the system grows.
+
+**Multi-surface system?** Overview → boundary model → each relevant lane doc → cross-language workflows → testing/audit discipline. That's the full arc.
+
+---
+
+## Problem-Pressure Routes
+
+| You need to... | Start here |
+|---|---|
+| Call C/C++ from Rust (or expose Rust to C) | `rust-ffi-mastery-c-cpp-deep-dive.md` |
+| Build a Python package with Rust internals | `rust-pyo3-maturin-bindings.md` |
+| Ship a native Node.js addon | `rust-node-native-addon-posture.md` |
+| Expose Rust logic to the browser via WASM | `wasm-bindgen-posture.md` |
+| Generate TypeScript types from Rust structs | `rust-typescript-bridge-patterns.md` |
+| Design a Tauri app's Rust/JS boundary | `rust-tauri-core-shell-and-ipc-boundaries.md` |
+| Coordinate builds across multiple languages | `rust-cross-language-workflows.md` |
+| Decide which interop lane to use at all | `boundary-activation-model.md` |
+| Prove your FFI boundary is sound | `rust-interop-testing-and-audit-discipline.md` |
+
+---
+
+## Cross-Lane Links
+
+- **Foundations** (`../foundations/`) — ownership rules don't stop at the FFI boundary; they get harder. Ground yourself there first if ownership is shaky.
+- **Error Patterns** (`../error-patterns/`) — error propagation across language boundaries is its own discipline. Check error-patterns when your FFI error story feels fragile.
+- **Architecture** (`../architecture/`) — crate-level structure decisions (workspace layout, feature flags) directly shape how interop crates are organized.
+- **Quality** (`../quality/`) — interop code needs stricter audit discipline than pure Rust. The testing/audit doc lives here, but quality standards come from the quality lane.
 
 ---
 

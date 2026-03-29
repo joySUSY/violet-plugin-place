@@ -1,23 +1,21 @@
 # Rust Foundations Index
+# Authors: Joysusy & Violet Klaudia 💖
 
 ## Purpose
 
-Canonical entrypoint for the foundational Rust doctrine.
+Canonical entrypoint for the foundational Rust doctrine — ownership, borrowing, lifetimes, idiomatic style, and the mental models that everything else builds on.
 
 Use this category when the task is about:
-- ownership
-- borrowing
-- lifetimes
-- idiomatic style
+- ownership, borrowing, lifetimes
+- idiomatic style and naming
 - baseline type ergonomics
 - first-principles Rust mental models
+- smart pointer selection and shared-state design
 
 ## Source Provenance
 
-- **Primary source:** current canonical foundations subtree under `references/foundations/`
-- **Derived from:** ownership/type/style donor families and the foundations doctrine canonization passes
-- **Upstream URL:** not applicable as a synthesized local navigation index
-- **Freshness status:** canonical local index aligned to the current foundations subtree
+- **Primary source:** `references/foundations/` canonical subtree
+- **Derived from:** ownership/type/style donor families and foundations doctrine canonization passes
 
 ---
 
@@ -31,6 +29,16 @@ Use this category when the task is about:
 
 ---
 
+## Reading Paths
+
+**First time here?** Start with ownership-memory-safety, then idiomatic-style, then the cookbook. That's the full foundation arc.
+
+**Under time pressure?** Go straight to the cookbook — it has decision matrices and compiler-error recovery cues that solve most immediate problems.
+
+**Building a mental model?** Ownership-memory-safety is the one to sit with. Read it slowly; it rewires how you think about Rust.
+
+---
+
 ## Reading Order
 
 1. `rust-foundations-ownership-memory-safety.md`
@@ -38,3 +46,26 @@ Use this category when the task is about:
 3. `rust-ownership-cookbook.md`
 
 Use this category before branching into architecture, async, interop, or error doctrine.
+
+---
+
+## Problem-Pressure Routes
+
+| You're struggling with... | Start here |
+|---|---|
+| Ownership confusion, borrow checker fights | `rust-ownership-cookbook.md` — decision matrices + compiler-error cues |
+| "What's the Rusty way to write this?" | `rust-idiomatic-style-and-patterns.md` — naming, API shape, ergonomics |
+| Mental model of how Rust memory actually works | `rust-foundations-ownership-memory-safety.md` — first principles |
+| `Arc` vs `Rc` vs `Box` — which smart pointer? | `rust-foundations-ownership-memory-safety.md` §Smart Pointer Selection |
+| Shared mutable state across threads | `rust-ownership-cookbook.md` §Shared-State Choices |
+
+---
+
+## Cross-Lane Links
+
+Foundations feeds into everything. When you're ready to go deeper:
+
+- **Architecture** (`../architecture/`) — how ownership principles scale into module and crate design
+- **Error Patterns** (`../error-patterns/`) — error types are deeply shaped by ownership (who owns the error context?)
+- **Quality** (`../quality/`) — idiomatic style is the first quality gate; foundations doctrine sets the bar
+- **Async/Concurrency** (`../async-concurrency/`) — ownership across `.await` boundaries is a foundations problem that lives in the async lane

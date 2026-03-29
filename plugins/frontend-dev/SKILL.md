@@ -21,6 +21,7 @@ Comprehensive standards for modern, distinctive, and high-performance user inter
 | `js-dev-skill` | Component Implementation | [`js-dev-skill/SKILL.md`](../js-dev-skill/SKILL.md) |
 | `dev-designer-utility` | UI Design & Tokens | [`dev-designer-utility/SKILL.md`](../dev-designer-utility/SKILL.md) |
 | `developer-tool` | CI/CD & Browser Testing | [`developer-tool/SKILL.md`](../developer-tool/SKILL.md) |
+| `typescript-coding-engine` | TS Type System | [`typescript-coding-engine/SKILL.md`](../typescript-coding-engine/SKILL.md) |
 
 This engine replaces disparate UI, CSS, and component tutorials with a single, aggressive "Design Engineering" framework. It bridges the gap between pure visual aesthetics (Apple HIG) and robust frontend architecture (React/Vue/Vanilla). 
 

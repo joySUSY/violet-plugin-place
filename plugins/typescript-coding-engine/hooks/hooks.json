@@ -1,13 +1,25 @@
 {
-  "description": "Cross-platform, prompt-first lifecycle hooks for the typescript-coding-engine plugin shell.",
   "hooks": {
-    "UserPromptSubmit": [
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-start-prime.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
       {
         "matcher": "*",
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "If the task is TypeScript-heavy, classify it into exactly one primary TypeScript lane before acting: core-types, generics-and-inference, type-level-programming, runtime-validation, tooling-and-quality, testing, architecture, or interop. Keep type-system doctrine, runtime validation, and donor reservoirs clearly separated. Prefer strict, boundary-aware, no-shortcut posture."
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/precompact-handoff.sh\"",
+            "timeout": 5
           }
         ]
       }
@@ -17,8 +29,9 @@
         "matcher": "*",
         "hooks": [
           {
-            "type": "prompt",
-            "prompt": "Before stopping, verify that no donor material was treated as a direct runtime mirror, no weak type shortcuts were normalized casually, and the current response still respects typescript-coding-engine shell boundaries, additive-only integration, and doctrine-first reasoning."
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/stop-review.sh\"",
+            "timeout": 5
           }
         ]
       }

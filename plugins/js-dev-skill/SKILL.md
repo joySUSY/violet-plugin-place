@@ -11,6 +11,8 @@ description: "JavaScript and Node.js runtime engine. ES2025+, React architecture
 | `frontend-dev` | UI Implementation & Frameworks | [`frontend-dev/SKILL.md`](../frontend-dev/SKILL.md) |
 | `dev-designer-utility` | UI Components & Design | [`dev-designer-utility/SKILL.md`](../dev-designer-utility/SKILL.md) |
 | `developer-tool` | CI/CD & Browser Automation | [`developer-tool/SKILL.md`](../developer-tool/SKILL.md) |
+| `typescript-coding-engine` | TS Type System | [`typescript-coding-engine/SKILL.md`](../typescript-coding-engine/SKILL.md) |
+| `go-coding-engine` | TS7/Corsa Backend | [`go-coding-engine/SKILL.md`](../go-coding-engine/SKILL.md) |
 
 ---
 

@@ -20,8 +20,8 @@ It is a map from **domain pressure** to **architectural posture**.
   - `rust-skills-main/README.md`
   - `rust-skills-main/CLAUDE_CODE_GUIDE.md`
   - `rust-skills-main2/index/domain-extensions.md`
-- **Upstream URL:** not yet fully re-verified from local artifacts in the current workspace
-- **Freshness status:** local-snapshot doctrine; upstream freshness verification still pending
+- **Upstream URL:** synthesized from local donor families (no single upstream)
+- **Freshness status:** canonical local doctrine, aligned to current ecosystem lane (2026-03-29)
 
 ---
 

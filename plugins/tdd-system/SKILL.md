@@ -23,6 +23,8 @@ Comprehensive standards for high-velocity, verification-first software engineeri
 | `math-skill-system` | Formal Model Verification | [`math-skill-system/SKILL.md`](../math-skill-system/SKILL.md) |
 | `dev-designer-utility` | UI & Theme Testing | [`dev-designer-utility/SKILL.md`](../dev-designer-utility/SKILL.md) |
 | `error-handling` | Root Cause Analysis | [`error-handling/SKILL.md`](../error-handling/SKILL.md) |
+| `go-coding-engine` | Go Testing Patterns | [`go-coding-engine/SKILL.md`](../go-coding-engine/SKILL.md) |
+| `typescript-coding-engine` | TS Type Testing | [`typescript-coding-engine/SKILL.md`](../typescript-coding-engine/SKILL.md) |
 
 ---
 
