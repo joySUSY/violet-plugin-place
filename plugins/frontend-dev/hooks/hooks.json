@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Silently check: does this task involve UI components, React, CSS, Tailwind, responsive design, accessibility, or Apple HIG? If YES, respond ONLY with: 'Consider consulting frontend-dev references at ${CLAUDE_PLUGIN_ROOT}/SKILL.md for domain-specific guidance.' If NO, respond with nothing — produce zero output, say absolutely nothing, do not explain why."
+          }
+        ]
+      }
+    ]
+  }
+}

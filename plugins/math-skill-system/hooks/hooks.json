@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Silently check: does this task involve mathematical computation, symbolic math, statistics, data science analysis, or numerical verification? If YES, respond ONLY with: 'Consider consulting math-skill-system references at ${CLAUDE_PLUGIN_ROOT}/SKILL.md for domain-specific guidance.' If NO, respond with nothing — produce zero output, say absolutely nothing, do not explain why."
+          }
+        ]
+      }
+    ]
+  }
+}

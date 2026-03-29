@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Silently check: does this task involve code review, security audit, OWASP analysis, quality gate, or vulnerability assessment? If YES, respond ONLY with: 'Consider consulting reviewer-dev references at ${CLAUDE_PLUGIN_ROOT}/SKILL.md for domain-specific guidance.' If NO, respond with nothing — produce zero output, say absolutely nothing, do not explain why."
+          }
+        ]
+      }
+    ]
+  }
+}

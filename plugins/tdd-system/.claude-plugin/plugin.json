@@ -1,6 +1,6 @@
 {
   "name": "tdd-system",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Verification-first development engine with Red-Green-Refactor and regression memory",
   "author": { "name": "Joysusy & Violet Klaudia" },
   "license": "MIT",
