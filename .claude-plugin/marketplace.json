@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Violet's curated collection of productivity and development plugins",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
       "name": "violet-skilltag-automation",
       "source": "./plugins/violet-skilltag-automation",
       "description": "Context-aware skill routing coordinator with workflow phase detection",
-      "version": "4.2.1",
+      "version": "4.3.0",
       "author": {
         "name": "Violet & Susy"
       },
