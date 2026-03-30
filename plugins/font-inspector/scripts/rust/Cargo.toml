@@ -1,8 +1,8 @@
 # Authors: Joysusy & Violet Klaudia 💖
 [package]
 name = "font-inspector"
-version = "2.0.0"
-edition = "2021"
+version = "2.0.3"
+edition = "2024"
 authors = ["Violet & Joysusy"]
 description = "High-performance font analysis tool with SVG/UFO export and MCP server"
 

@@ -82,10 +82,12 @@ Thumbs.db
 secrets/
 credentials/
 
-# Rust build artifacts
-**/target/
-**/*.exe
+# Rust build artifacts (intermediate only — keep release binaries)
 **/*.pdb
+**/target/debug/
+**/target/incremental/
+**/target/.rustc_info.json
+**/target/.cargo-lock
 
 # Encrypted local files (real content — never push)
 **/*.enc

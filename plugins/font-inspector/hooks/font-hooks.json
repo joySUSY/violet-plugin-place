@@ -1,6 +1,19 @@
 {
-  "description": "Font Inspector auto-detection and SVG validation hooks",
+  "description": "Font Inspector: auto-build + font detection + SVG validation",
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/auto-build.sh\"",
+            "timeout": 120,
+            "statusMessage": "Font Inspector: checking MCP binary..."
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash|Read|Write|Edit",

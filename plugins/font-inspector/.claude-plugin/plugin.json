@@ -1,7 +1,7 @@
 {
   "_comment": "Authors: Joysusy & Violet Klaudia 💖",
   "name": "font-inspector",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Font visualization and analysis plugin with MCP engine, SVG/UFO export and CJK optimization",
   "author": {
     "name": "Violet & Joysusy",
