@@ -32,7 +32,7 @@
       "name": "font-inspector",
       "source": "./plugins/font-inspector",
       "description": "Font analysis MCP server with glyph comparison, coverage analysis, and hooks",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "author": {
         "name": "Violet & Susy"
       },
