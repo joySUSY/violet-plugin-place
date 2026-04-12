@@ -1,0 +1,15 @@
+# Authors: Joysusy & Violet Klaudia
+# Enforce LF line endings for shell scripts across all platforms
+# Prevents git core.autocrlf=true from converting .sh to CRLF on Windows checkout
+
+*.sh text eol=lf
+*.bash text eol=lf
+
+# JSON and JS should also stay LF for cross-platform hook consistency
+*.json text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+
+# Markdown can be auto (platform-native)
+*.md text auto
