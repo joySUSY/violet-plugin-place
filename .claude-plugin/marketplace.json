@@ -182,7 +182,7 @@
       "name": "typescript-coding-engine",
       "source": "./plugins/typescript-coding-engine",
       "description": "TypeScript type-system engine. Strict posture, generics, inference, runtime validation, architecture decisions, and Rust/Tauri interop.",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
@@ -201,7 +201,7 @@
       "name": "rust-coding-engine",
       "source": "./plugins/rust-coding-engine",
       "description": "Rust architecture engine. Ownership, async, interop (FFI/PyO3/NAPI/WASM/Tauri), production patterns, and ecosystem navigation.",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
@@ -378,7 +378,7 @@
       "name": "developer-tool",
       "source": "./plugins/developer-tool",
       "description": "Developer tooling engine. Agentic systems, AI memory, shell/terminal, build/deploy, cross-platform, and data processing.",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "author": {
         "name": "Joysusy & Violet Klaudia"
       },
