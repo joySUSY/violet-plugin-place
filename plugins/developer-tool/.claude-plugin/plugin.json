@@ -1,6 +1,6 @@
 {
   "name": "developer-tool",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Plugin-first runtime shell for the developer-tool engine. Provides lifecycle hooks, routing commands, specialist agents, and bridge skills around the canonical developer-tool knowledge center.",
   "author": {
     "name": "Joysusy & Violet Klaudia"

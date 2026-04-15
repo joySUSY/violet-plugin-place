@@ -1,6 +1,6 @@
 {
   "name": "typescript-coding-engine",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Plugin-first runtime shell for the typescript-coding-engine. Provides commands, hooks, agents, rule indexes, and bridge skills for TypeScript type systems, runtime validation, tooling, testing, architecture, and interop.",
   "author": {
     "name": "Joysusy & Violet Klaudia"

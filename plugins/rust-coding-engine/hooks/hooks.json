@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/session-start-prime.js\"",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.cmd\" session-start-prime.js",
             "timeout": 5
           }
         ]
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/precompact-handoff.js\"",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.cmd\" precompact-handoff.js",
             "timeout": 5
           }
         ]
@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/stop-review.js\"",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.cmd\" stop-review.js",
             "timeout": 5
           }
         ]
