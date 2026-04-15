@@ -11,5 +11,8 @@
 *.mjs text eol=lf
 *.cjs text eol=lf
 
+# .cmd polyglot wrappers must stay LF for Unix bash portion to parse correctly
+*.cmd text eol=lf
+
 # Markdown can be auto (platform-native)
 *.md text auto
